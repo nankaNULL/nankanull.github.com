@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/**
+ * 
+ * @authors Your Name (you@example.org)
+ * @date    2017-03-02 14:35:37
+ * @version $Id$
+ */
+
+/*able,tr,td{
+	border:1px solid blue;
+}
+td{
+	height:100px;
+	width:300px;
+}*/
+#a{
+	width:100%;
+	height:100px;
+	background:#eeeeee;
+}
+#a td{
+	width:25%;
+	/*text-align:right;*/
+	border-left: 1px dashed gray;
+}
+#b{
+	width:100%;
+	height:100px;
+
+	border: 1px solid gray;
+}
+#b td{
+	width:50%;
+}
+#c{
+	width:100%;
+	height:200px;
+	background:#eeeeee;
+}
+#c td,th{
+	width:50%;
+}
