@@ -5,38 +5,107 @@
  * @date    2017-03-10 08:34:40
  * @version $Id$
  */
-.a{
-	width:100%;
-	height:30px;
-	border:solid 1px grey;
-	/*margin:10px;*/
-	padding:10px;
-	/*position:absolute;*/
-	background-color:#ccccdd;
+#box1{
+	width:400px;
+	height:20px;
+	border:solid 1px lightgrey;
+	padding:5px;
+	background-color:#ccccff;
 
 }
-.b{
-	width:100%;
-	height:120px;
-	border:solid 2px grey;
-	/*margin:10px;*/
-	padding:10px;
-	/*position:absolute;*/
+#box2{
+	width:400px;
+	height:70px;
+	border:solid 1px lightgrey;
+	padding:5px;
+	background-color:#ffffff;
+}#box3{
+	width:400px;
+	height:95px;
+	border:solid 1px lightgrey;
+	padding:5px;
 	background-color:#eeeeff;
-}.c{
-	width:100%;
+}#box4{
+	width:400px;
 	height:40px;
-	border:solid 1px grey;
-	/*margin:10px;*/
-	padding:10px;
-	/*position:absolute;*/
-	background-color:#ccccdd;
-}.d{
-	width:100%;
-	height:270px;
-	border:solid 2px grey;
-	/*margin:10px;*/
-	padding:10px;
-	/*position:absolute;*/
+	border:solid 1px lightgrey;
+	padding:5px;
 	background-color:#eeeeff;
+}#box5{
+	width:410px;
+	height:260px;
+	border:solid 1px lightgrey;
+	background-color:#eeeeff;
+}
+.small-box-1{
+	width:20%;
+	float:left;
+    text-align:center;
+}
+.text1{
+	margin-top:9px;
+    width: 100%;
+}
+.small-box-2{
+	float:left;
+	margin:10px 20px; 
+	width:80px;
+	height:80px;
+	background-color:red;
+	
+}.text2{
+	float:left;
+	margin-top:13px;
+	padding:6px;
+    width: 65%;
+    border:solid 1px grey;
+}.button1{
+	float: left;
+	margin: 5px 0px 10px 10px;
+    height: 25px;
+    width:25%;
+    background:red;
+    text-align: center;
+    color: white;
+}
+#login {
+    margin: 5px 0 10px 40px;
+    width: 25%;
+}#text2{
+	padding:5px;
+	margin:20px 10px;
+	width:380;
+}
+.small-box-3{
+
+	float:left;
+	box-sizing: border-box;
+	text-align: center;
+	height:66.6%;
+	width:40%;
+	border:solid 1px lightgrey;
+}
+.small-box-4{
+	float: left;
+    text-align: center;
+    box-sizing: border-box;
+    width: 20%;
+    height: 33.3%;
+    border:solid 1px lightgrey;
+}.small-box-5{
+	margin: 15% 0 10px 0;
+	margin-left: auto;
+    margin-right: auto;
+    width: 75px;
+    height: 90px;
+    background: red;
+}
+.small-box-6{
+	margin: 15% 0 10px 0;
+	margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: 40px;
+    background: red;
+	
 }
