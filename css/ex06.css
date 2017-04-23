@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.ui-box{
+	display:flex;
+	flex-wrap: wrap;
+	margin:auto;
+	height:310px;
+	width:720px;
+	border:solid 2px grey;
+	position:relative;
+}
+.ui-box-image{
+	margin:18px 0 0 20px;
+	height:120px;
+	width:120px;
+	cursor:pointer;
+}
+.ui-show{
+	position:absolute;
+	left: 30%;
+    top: 18%;
+	margin:0;
+	height:64%;
+	width:40%;
+	background-color:white;
+	border:solid 2px grey;
+	cursor:pointer;
+}
+.ui-show-image{
+	position:absolute;
+	left: 20%;
+    top: 12%;
+    margin:0;
+    height:76%;
+    width:60%;
+	border:solid 2px grey;
+	cursor:pointer;
+}
+
+.ui-slide{
+	position:relative;
+	margin:auto;
+	margin-top:30px;
+	height:400px;
+	width:500px;
+	/*border:solid 1px black;*/
+}
+.ui-slide-contain{
+	margin:0;
+	padding:0;
+	list-style-type:none;
+	display:flex;
+	margin:10px 0 0 0;
+	height:36px;
+	width:240px;
+	border:solid 1px grey;
+	border-bottom: 0px;
+}
+.ui-slide-button{
+	height:36px;
+	width:80px;
+	border:solid 1px grey;
+	border-bottom: 0px;
+	cursor:pointer;
+}
+.ui-slide-number{
+	padding-top:75px;
+	height:225px;
+	width:480px;
+	border:solid 2px grey;
+	text-align:center;
+	color:#7f7f7f;
+	font-size:100px;
+	font-weight:bold;
+}
+.ui-delete{
+	padding-top:30px;
+	position:relative;
+	margin:auto;
+	margin-top:30px;
+	margin-bottom:30px;
+	height:300px;
+	width:500px;
+	border:solid 2px grey;
+}
+.ui-delete-item{
+	display:flex;
+	margin:10px 0 0 20px;
+	height:30px;
+	width:460px;
+	border:solid 2px grey;
+}
+.ui-delete-item-list{
+	padding-top:5px;
+	height:30px;
+	width:30px;
+	color:#7f7f7f;
+	text-align: center;
+	font-size:14px;
+	font-weight: bold;
+}
+.ui-delete-item-message{
+	height:30px;
+	width:350px;
+	color:#7f7f7f;
+	text-align: center;
+	font-size:14px;
+	border-right:solid 2px grey;
+	border-left:solid 2px grey;
+}
+.ui-delete-item-operate{
+	/*position:fixed;*/
+	padding-top:5px;
+	height:30px;
+	width:80px;
+	color:#7f7f7f;
+	text-align: center;
+	font-size:14px;
+	font-weight: bold;
+	cursor:pointer;
+
+}
+.ui-delete-button{
+	/*margin:115px 0 0 360px;*/
+	position:absolute;
+	left: 72%;
+    top: 84%;
+	margin:0;
+	padding-top:3px;
+	color:white;
+	background-color:#339966;
+	text-align: center;
+	width:120px;
+	height:27px;
+	font-size:16px;
+	font-weight: bold;
+	border:solid 2px #116633;
+	cursor:pointer;
+}
