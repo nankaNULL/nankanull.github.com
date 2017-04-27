@@ -15,7 +15,14 @@
 	cursor:pointer;
 }
 .ui-show{
-	display:none;
+	/*display:none;*/
+	height:100%;
+	width:100%;
+}
+.ui-show-contain{
+	display: flex;
+	justify-content: center;
+	align-items: center;
 	position:absolute;
 	left: 30%;
     top: 18%;
@@ -27,12 +34,8 @@
 	cursor:pointer;
 }
 .ui-show-image{
-	position:absolute;
-	left: 20%;
-    top: 12%;
-    margin:0;
-    height:76%;
-    width:60%;
+    height:256px;
+    width:256px;
 	border:solid 2px grey;
 	cursor:pointer;
 }

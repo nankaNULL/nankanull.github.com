@@ -204,10 +204,27 @@ a{margin-top:2px;}
 	width:402px;
 	height:100%;
 }
-#cloud{
-	width:21px;
-	height:16px;
-	margin:13px 0 0 80px;
+.ui-table-name-icon{
+	display: flex;
+	justify-content: flex-end;
+	width:102px;
+	height:100%;
+	/*border:solid 1px black;*/
+}
+#icon-cloud{
+	margin-top:12px;
+	color:lightblue;
+}
+#icon-train-first{
+	margin:12px 3px 0 12px;
+	color:#007cce; 
+}
+#icon-file{
+	margin:3px -3px 0 12px;
+}
+#icon-train-second{
+	margin:13px 3px 0 12px;
+	color:#028d5e;
 }
 #square{
 	width:15px;
