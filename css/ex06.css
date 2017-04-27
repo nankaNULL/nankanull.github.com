@@ -15,7 +15,7 @@
 	cursor:pointer;
 }
 .ui-show{
-	/*display:none;*/
+	display:none;
 	height:100%;
 	width:100%;
 }
