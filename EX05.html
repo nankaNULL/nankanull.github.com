@@ -7,51 +7,121 @@
 		<meta name="description" content="">
 		<meta name="keywords" content="">
 		<link href="" rel="stylesheet">
-		<link rel='stylesheet' type='text/css' href='css/ex06.css' />
+		<link rel='stylesheet' type='text/css' href='css/ex05.css' />
 	</head>
 	<body>
-		<div class='ui-button'></div>
-		<div class='ui-ticket'>
-			<div class='ui-ticket-message'></div>
-			<div class='ui-ticket-operate'></div>
+		<div class='ui-top'>
+			<div class='ui-top-button'>经路 1</div>
+			<div class='ui-top-icon'>早</div>
 		</div>
-		<table class='ui-table' cellspacing='0'>
-			<tr class='ui-table-title'>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class='ui-table-name'>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class='ui-table-message'>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class='ui-table-name'>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class='ui-table-message'>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-			<tr class='ui-table-name'>
-				<td></td>
-				<td></td>
-				<td></td>
-			</tr>
-		</table>
+		<div class='ui-ticket'>
+			<div class='ui-ticket-message'>
+				<div class='ui-ticket-message-first'>
+					<span class='ui-ticket-message-time'>08:43</span>
+					<span class='ui-ticket-message-time2'>→ 09:43</span>
+					<span class='ui-ticket-message-cost'>6,560円</span>
+				</div>
+				<div class='ui-ticket-message-second'>
+					<span class='ui-ticket-operate-time1'>1時間0分</span>
+					<span class='ui-ticket-operate-time2'>54分</span>
+					<span class='ui-ticket-operate-noli'>1回</span>
+					<span class='ui-ticket-operate-distance'>190.4km</span>
+				</div>
+			</div>
+			<div class='ui-ticket-operate'>
+				<img src="image/print.png" alt="" style="margin-right:-6px">
+				<a href="">打印</a>
+				<img src="image/menu.png" alt=""  style="margin-right:-6px" id='menu'>
+				<a href="">详单</a>
+			</div>
+		</div>
+		<div class='ui-table'>
+			<div class='ui-table-title'>
+				<span class='ui-table-title-road'>路径</span>
+				<span class='ui-table-title-sit'>乘车位置</span>
+				<span class='ui-table-title-cost'>费用</span>
+				<span class='ui-table-title-time'>指定席/费用</span>
+				<span class='ui-table-title-distance'>距离</span>
+			</div>
+			<div class='ui-table-name'>
+				<div class='ui-table-name-place'>
+					<img src="image/cloud.png" alt="" id='cloud'>
+					<img src="image/square.png" alt="" id='square'>
+					<div id='nagoya'>名古屋</div>
+				</div>
+				<div class='ui-table-name-train'>17番線発</div>
+				<div class='ui-table-name-contain'>
+					<a href=""> 时刻表 </a>
+					<a href=""> 车站图 </a>
+					<a href=""> 线路图 </a>
+					<a href="" id='ui-table-name-contain-map'> 地图 </a>
+				</div>
+			</div>
+			<div class='ui-table-message'>
+				<div class='ui-table-message-contain'>
+					<div class='ui-table-message-contain1'>
+						<div class='ui-contain1-time1'>08:43-09:33</div>
+						<div class='ui-contain1-time2'>50分</div>
+					</div>
+					<div id='line'></div>
+					<img src="image/train.png" alt="" id='train1'>
+					<span id='xin'>新</span>
+					<a href="" id='ui-table-message-text'>のぞみ203号(新大阪行)</a>
+				</div>
+				<div class='ui-table-message-null'></div>
+				<div class='ui-table-message-cost'>3,350円</div>
+				<div class='ui-table-message-sit'>
+					<div class='ui-table-message-sit1'>指定席</div>
+					<div class='ui-table-message-sit2'>3,210円</div>
+				</div>
+				<div class='ui-table-message-distance'>186.6km</div>
+			</div>
+			<div class='ui-table-name'>
+				<div class='ui-table-name-place'>
+					<span id='ui-traintime'>（6分）</span>
+					<img src="image/square2.png" alt="" id='square2'>
+					<div id='nagoya'>新大阪</div>
+				</div>
+				<div class='ui-table-name-train'>
+					<div class='ui-train23'>23番線着</div>
+					<div class='ui-train16'>16番線発</div>
+				</div>
+				<div class='ui-table-name-contain'>
+					<a href=""> 时刻表 </a>
+					<a href=""> 车站图 </a>
+					<a href=""> 线路图 </a>
+					<a href="" id='ui-table-name-contain-map'> 地图 </a>
+				</div>
+			</div>
+			<div class='ui-table-message'>
+				<div class='ui-table-message-contain'>
+					<div class='ui-table-message-contain1'>
+						<div class='ui-contain1-time1'>09:39-09:43</div>
+						<div class='ui-contain1-time2'>4分</div>
+					</div>
+					<div id='line'></div>
+					<img src="image/train2.png" alt="" id='train1'>
+					<span id='JR'>JR</span>
+					<span id='road'>JR京都線新快速(姫路行)</span>
+				</div>
+				<div class='ui-table-message-null'></div>
+				<div class='ui-table-message-cost'>↓</div>
+				<div class='ui-table-message-sit'></div>
+				<div class='ui-table-message-distance'>3.8km</div>
+			</div>
+			<div class='ui-table-name'>
+				<div class='ui-table-name-place'>
+					<img src="image/cloud.png" alt="" id='cloud'>
+					<img src="image/square.png" alt="" id='square'>
+					<div id='nagoya'>大阪</div>
+				</div>
+				<div class='ui-table-name-train'>5番線着</div>
+				<div class='ui-table-name-contain'>
+					<a href="">车站图</a>
+					<a href="">线路图</a>
+					<a href="" id='ui-table-name-contain-map'>地图</a>
+				</div>
+			</div>
+		</div>
 	</body>
 </html>

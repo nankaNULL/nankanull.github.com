@@ -1,59 +1,358 @@
 @charset "UTF-8";
+body{font-family: "SimSun";}
 div{box-sizing: border-box;}
-.ui-button{
+.ui-top{
+	display:flex;
 	margin:10px 0 0 10px;
-	width:75px;
-	height:25px;
-	background-color:;
-	border:solid 1px blue;
+	width:120px;
+	height:22px;
+}
+.ui-top-button{
+	width:80px;
+	height:26px;
+	background: linear-gradient(#2F94CD, #1B88C4);
+	border:solid 1px #1b88c4;
+	border-top-left-radius: 2px;
+    border-top-right-radius: 2px;
 	border-bottom:0;
 	color:white;
+	font-size:13px;
 	font-weight:bold;
+	text-align: center;
+	line-height: 26px;
+}
+.ui-top-icon{
+	margin:0px 0 0 5px;
+	width:18px;
+	height:18px;
+	color:white;
+	border:solid 1px #fd6710;
+	border-radius: 2px;
+	font-size:14px;
+	text-align: center;
+	line-height: 18px;
+	background: linear-gradient(#FC7D18, #FF4002);
 }
 .ui-ticket{
 	margin:0 0 5px 10px;
-	border:solid 1px lightgrey;
-	border-top:solid 2px blue;
-	width:500px;
-	height:75px;
+	border:solid 1px #c0c0c0;
+	border-top:solid 4px #1b88c4;
+	width:685px;
+	height:76px;
+	background-color:#fffbde;
 }
 .ui-ticket-message{
-	border-bottom:solid 1px lightgrey;
 	width:100%;
 	height:50px;
-	background-color:;
+	background-color:white;
+	border:solid 1px #c0c0c0;
+	border-left:solid 0px lightgrey;
+	border-right:solid 0px lightgrey;
+	font-size:15px;
+	font-weight:bold;
+	color:#d70000;
+	background: linear-gradient(#FFFFFF, #F3F4F4);
 }
+.ui-ticket-message-first{
+	margin:5px 0 0 8px;
+	width:675px;
+	height:14px;
+	/*background-color:white;*/
+}
+.ui-ticket-message-time{
+	width:35px;
+	height:15px;
+}
+.ui-ticket-message-time:after{
+	font-size:13px;
+	content:"発 ";
+	color:#cf0000;
+	font-weight:normal;
+}
+.ui-ticket-message-time2{
+	width:35px;
+	height:15px;
+}
+.ui-ticket-message-time2:after{
+	font-size:13px;
+	content:"着";
+	color:#cf0000;
+	font-weight:normal;
+}
+.ui-ticket-message-cost{
+	font-size:13px;
+	margin-left:12px;
+}
+.ui-ticket-message-cost:before{
+	font-size:14px;
+	content:"総額 ";
+	color:black;
+	font-weight:normal;
+}
+.ui-ticket-message-second{
+	margin:8px 0 0 8px;
+	font-size:13px;
+	font-weight:bold;
+	width:675px;
+	height:15px;
+	/*background-color:white;*/
+}
+.ui-ticket-operate-time1{
+}
+.ui-ticket-operate-time1:before{
+	content:"所要時間 ";
+	color:black;
+	font-weight:normal;
+}
+.ui-ticket-operate-time2{
+	margin-left:15px;
+	color:black;
+}
+.ui-ticket-operate-time2:before{
+	content:"乘车时间 ";
+	color:black;
+	font-weight:normal;
+}
+.ui-ticket-operate-noli{
+	margin-left:15px;
+}
+.ui-ticket-operate-noli:before{
+	content:"乗換 ";
+	color:black;
+	font-weight:normal;
+}
+.ui-ticket-operate-distance{
+	margin-left:15px;
+	color:black;
+}
+.ui-ticket-operate-distance:before{
+	content:"距离 ";
+	color:black;
+	font-weight:normal;
+}
+
 .ui-ticket-operate{
-	width:100%;
-	height:25px;
-	background-color:;
+	display:flex;
+	justify-content: flex-end;
+	width:675px;
+	height:21px;
+	font-size:13px;
+	padding-top:1px;
 }
+#menu{
+	margin-left:10px;
+}
+a{margin-top:2px;}
 .ui-table{
 	margin:0 0 0 10px;
-	width:500px;
-	height:250px;
-	border:solid 1px lightgrey;
-}
-td{
-	border:solid 1px lightgrey;
-	
-	border-collapse:collapse;
+	width:685px;
+	height:217px;
 }
 .ui-table-title{
-	width:100px;
-	height:20px;
-	border:solid 2px white;
-	background-color:lightgrey;	
+	display: flex;
+	width:100%;
+	height:16px;
+	border-bottom:solid 1px white;
+	text-align: center;
+	font-size: 12px;
+	color:#607a90;
+	background-color:#cedce8;
+}
+.ui-table-title-road{
+	border-right:solid 1px white;
+	width:405px;
+	height:100%;
+}
+.ui-table-title-sit{
+	border-right:solid 1px white;
+	width:64px;
+	height:100%;
+}
+.ui-table-title-cost{
+	border-right:solid 1px white;
+	width:70px;
+	height:100%;
+}
+.ui-table-title-time{
+	border-right:solid 1px white;
+	width:81px;
+	height:100%;
+}
+.ui-table-title-distance{
+	border-right:solid 1px white;
+	width:65px;
+	height:100%;
 }
 .ui-table-name{
+	display:flex;
 	width:100%;
-	height:50px;
-	border:solid 1px lightgrey;
+	height:41px;
+	border:solid 1px #c0c0c0;
 	border-top:0;
-	background-color:;
+	background-color:#f2f2f2;
+	font-size:12px;
+	line-height: 41px;
+	text-align: center;
 }
+
+.ui-table-name-place{
+	display:flex;
+	font-family: "YouYuan";
+	font-size:16px;
+	font-weight: bold;
+	color:black;
+	width:402px;
+	height:100%;
+}
+#cloud{
+	width:21px;
+	height:16px;
+	margin:13px 0 0 80px;
+}
+#square{
+	width:15px;
+	height:15px;
+	margin:13px 4px 0 2px;
+}
+#square2{
+	width:12px;
+	height:12px;
+	margin:13px 7px 0 3px;
+}
+#nagoya{
+	margin-top:-2px;
+}
+#ui-traintime{
+	width:102px;
+	line-height: 41px;
+	font-size: 14px;
+	font-weight: normal;
+	font-family: "SimSun";
+}
+.ui-train23{
+	/*height:20px;*/
+	margin-top:2px;
+	line-height: 20px;
+}
+.ui-train16{
+	margin-top:-3px;
+	line-height: 20px;
+}
+.ui-table-name-train{
+	width:64px;
+	height:42px;
+}
+.ui-table-name-contain{
+	display:flex;
+	justify-content: flex-end;
+	width:216px;
+	height:100%;
+	line-height: 38px;
+}
+#ui-table-name-contain-map{
+	margin-right:12px;
+}
+a{
+	display: block;
+	margin-left:6px;
+	color:#002cbd;
+}
+
+
 .ui-table-message{
+	display:flex;
 	width:100%;
-	height:40px;
-	border-bottom:solid 1px lightgrey;
+	height:38px;
+	border-bottom:solid 1px #c0c0c0;
+	text-align: center;
+}
+.ui-table-message-contain{
+	display:flex;
+	width:403px;
+	height:100%;
+	font-weight: bold;
+	font-size:13px;
+	line-height: 38px;
+}
+.ui-table-message-contain1{
+	width:109px;
+	height: 100%;
+    line-height: 19px;
+    font-size: 12px;
+    font-family: "STHeiti";
+}
+.ui-contain1-time1{
+	margin:4px 0 0 0;
+	color:black;
+}
+.ui-contain1-time2{
+	margin:-5px 0 0 0;
+	color:black;
+	font-weight: normal;
+}
+#line{
+	width:6px;
+	height: 100%;
+	background: linear-gradient(#96c7d8 50%, #ffffff 50%); 
+    background-size: 100% 15px;
+    border:solid 2px #96c7d8;
+}
+#train1{
+	margin:7px 0 0 8px;
+	height:100px;
+	height:23px;
+}
+#ui-table-message-text{
+	margin-left:12px;
+	font-weight: normal;
+	color:#0069a3;
+	line-height: 30px;
+}
+#xin{
+	color:#1aa3ff;
+}
+#JR{
+	font-size: 14px;
+	color:#0d9d6d;
+}
+#road{
+	margin-left:12px;
+	font-weight: normal;
+	color:#0069a3;
+}
+.ui-table-message-null{
+    border-left:solid 1px #c0c0c0;
+	width:64px;
+	height:100%;
+}
+.ui-table-message-cost{
+	border-left:solid 1px #c0c0c0;
+	width:70px;
+	height:100%;
+	font-weight: bold;
+	line-height: 38px;
+	font-size:15px;
+	/*color:#000087;*/
+}
+.ui-table-message-sit{
+	border-left:solid 1px #c0c0c0;
+	width:81px;
+	height:100%;
+	font-size:13px;
+	
+}
+.ui-table-message-sit1{
+	margin-top:2px;
+	line-height: 19px;
+}
+.ui-table-message-sit2{
+	margin-top:-3px;
+	line-height: 19px;
+}
+.ui-table-message-distance{
+	border-left:solid 1px #c0c0c0;
+	width:65px;
+	height:100%;
+	line-height: 38px;
+	font-size:14px;
 }
