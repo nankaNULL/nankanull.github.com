@@ -15,6 +15,7 @@
 	cursor:pointer;
 }
 .ui-show{
+	display:none;
 	position:absolute;
 	left: 30%;
     top: 18%;

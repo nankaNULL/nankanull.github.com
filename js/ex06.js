@@ -1,4 +1,4 @@
-$(".ui-show").hide();
+// $(".ui-show").hide();
 $(init)
 
 function init(){
