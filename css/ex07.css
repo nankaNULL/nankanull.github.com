@@ -21,7 +21,7 @@
 	font-size: 12px;
 	color:white;
 }
-#icon-angle-down{color:#a4f4ef;}
+#icon-angle-down{margin:17px 0 0 5px; color:#a4f4ef;}
 #icon-search{color:white; margin:18px -22px 0 0; z-index: 1;}
 #icon-search2{color:#aba7a2;}
 #icon-user{}
