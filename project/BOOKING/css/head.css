@@ -1,0 +1,136 @@
+*{
+	padding:0;
+	margin:0;
+}
+a{
+ 	text-decoration: none;
+}
+html{
+	height: 100;
+}
+/*.navbar-nav{
+ 	vertical-align: middle;
+}*/
+.body{
+	margin-top: 52px;
+	width: 100%;
+	height: 1000px;
+	background-color: gray;
+}
+.navbar{ 
+ 	border-bottom: 1px solid #28ab8b;
+}
+.Mobile-text{
+ 	font-size: 1.0em;
+ 	font-family: "宋体";
+}
+.massage-text{
+ 	font-size: 1.0em;
+ 	font-weight: bold;
+}
+.navbar-default{
+	background-color: #fff;
+}
+.navbar-default .navbar-brand{
+	color: #28ab8b;
+}
+.navbar-default .navbar-brand:hover{
+	color: #28ab8b;
+}
+.navbar-default .navbar-nav> li >a:hover{
+	text-decoration: none;
+ 	color: #999999;
+ 	font-weight: bold;
+}
+.bottom{
+	width: 100%;
+	background-color: #28ab8b;
+	text-align: center;
+	color: white;
+}
+.message-line{
+	line-height: 120px;
+	height: 100px;
+	font-size: 1.2em;
+}
+.bottom-message{
+	font-size: 1.0em;
+	font-weight: bold;
+	height: 100px;
+}
+@media screen and (min-width: 1024px){
+	.navbar-default .navbar-nav .sign{
+		margin-left: 30px;
+		color: #28ab8b;
+	}
+	.navbar-default .navbar-nav .sign:hover{
+		color: #28ab8b;
+		font-weight: bold;
+	}
+}
+@media screen and (min-width : 768px) and (max-width: 1023px){
+	.navbar>.container .navbar-brand{
+		width:100%;
+ 		margin-left: -18%;
+ 	}
+ 	.nav>li>a{
+ 		position: relative;
+ 		display: block;
+ 		padding: 10px 8px;
+ 	}
+ 	.navbar-nav>li>a {
+    	padding-top: 15px;
+    	padding-bottom: 15px
+	}
+	.navbar-default .navbar-nav .sign{
+		margin-left: 30px;
+		color: #28ab8b;
+	}
+	.navbar-default .navbar-nav .sign:hover{
+		color: #28ab8b;
+		font-weight: bold;
+	}
+}
+@media screen and (min-width: 240px) and (max-width: 767px){
+	.navbar-default{
+		margin-left: 20%;
+	}
+	.navbar-header{
+	    text-align: center;
+	    width: 100%;
+	}
+	.navbar-brand {
+		float:none;
+	    display:inline-block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	  	margin-top: 0;
+	}
+	.navbar-toggle{
+		margin-right: -15px;
+	}
+	.navbar{ 
+ 		border-bottom: none;
+	}	
+	.navbar-default .navbar-nav> li >a:hover{
+		text-decoration: none;
+ 		color: #999999;
+ 		font-weight: bold;
+	}
+}
+/*@media only screen and (max-width: 479px){
+	.navbar-header{
+	    text-align: center;
+	    width: 100%;
+	}
+	.navbar-brand {
+		float:none;
+	    display:inline-block;
+	  	margin-left: auto;
+	  	margin-right: auto;
+	  	margin-top: 0;
+	}
+	.navbar-toggle{
+		margin-right: -15px;
+	}	
+}*/

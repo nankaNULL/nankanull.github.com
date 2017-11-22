@@ -1,0 +1,47 @@
+.main-title{
+	color: rgb(101,210,164);
+	font-size: 34px;
+	margin-top: 80px;
+}
+.main-mobile-masstitle{
+	color: rgb(102,102,102);
+	font-size: 26px;
+	margin-top: 80px;
+}
+.main-asked{
+	margin-top: 80px;
+	color: rgb(102,102,102);
+}
+.main-asked-circle{
+    color: rgb(100,210,163);
+    font-size: 20px;
+    margin-right:5px;
+}
+.main-asked-mobile{
+	color: rgba(102,102,102,0.8);
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+.main-asked-subtitle{
+	color: rgb(100,210,163);
+	font-size: 18px;
+}
+.main-asked-buttomblock{
+	height: 70px;
+}
+.main-massage-mobile{
+	display: none;
+}
+@media screen and (max-width: 735px) 
+{
+    .main-asked{
+    	color: black;
+    }
+    .main-massage-mobile{
+	    display: block;
+    }
+    .main-massage{
+        display: none;
+    }
+}

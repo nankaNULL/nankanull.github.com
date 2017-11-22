@@ -1,0 +1,517 @@
+@charset "UTF-8";
+body {
+  font-family: Century Gothic;
+  /*font-family: Gotham Bold;*/
+}
+.content {
+	width:544px;
+	margin:auto;
+    margin-top:90px;
+}
+.pointer-list {
+	width:426px;
+	margin:auto;
+	border-top:solid 2px #d8fae9;
+	border-bottom:solid 2px #d8fae9;
+	height:69px;
+}
+.pointer-list li{
+	float:left;
+	width:20%;
+	color:#cccccc;
+	text-align: center;
+	line-height: 64px;
+	list-style-type: none;
+	font-size:1.6em;
+	font-weight: bold;
+	color:#cccccc;
+}
+#step1{
+	margin-left:10%;
+}
+
+#number_bold{
+	margin-top: -4px;
+	color:#666666;
+	font-size:2.4em;
+    font-weight: bold;
+}
+/*----------------------------*/
+.wizard-containter-sign{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	width: 544px;
+	margin:auto;
+	margin-top: 20px;
+}
+.wizard-title{
+	text-align: center;
+	width: 100%;
+}
+.text-discribe{
+	font-size: 2.2em;
+	color:#b3b3b3;
+}
+/*----*/
+.lazy{
+	width:264px;
+}
+.choose{
+	margin-top:40px;
+}
+.choose a{
+	text-decoration: none;
+	color:black;
+}
+.choose div{
+	margin:0 0 10px 0;
+	height:30px;
+	color:#666666;
+}
+#choose-signup{
+	background-color:#d9fbea;
+}
+
+.choose input{
+	margin:8px 0 0 20px;
+}
+.choose label{
+	margin:0 0 0 10px;
+	font-weight:normal;
+}
+.btn-facebook{
+	display:flex;
+	justify-content: center;
+	border-radius: 8px;
+	margin-top: 15px;
+	height:30px;
+	background-color: #3d5a94;
+	color:white;
+	line-height: 34px;
+	font-size: 0.9em;
+	font-weight: normal;
+	cursor: pointer;
+}
+.btn-facebook i{
+	font-size: 1.45em;
+	margin:8px 8px 0 0;
+}
+.line{
+	margin:25px 0 5px 0;
+	display:flex;
+	align-items: center;
+	height:30px;
+}
+.line div{
+	border:solid 1px #ebebeb;
+	width:115px;
+	height:0;
+}
+.line #or{
+	margin-top: -20px;
+	color:black;
+	font-size: 1em;
+	border:0;
+	width:34px;
+	text-align: center;
+}
+.sign-massage-list p{
+	margin:15px 0 0 0;
+	color:#979797;
+	font-size: 0.75em;
+	font-weight: bold;
+}
+.sign-massage-list input,.form-control{
+	width:100%;
+	height:36px;
+	border:solid 2px #ebebeb;
+	font-size: 0.75em;
+}
+.sign-massage-list select{
+	border-radius: 1px;
+	appearance: none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+}
+.select-massage{
+	display: flex;
+}
+.select-massage i{
+	font-size:1.6em;
+	color:#65d0a2;
+	margin:7px 0 0 -27px;
+}
+/*---------*/
+.wizard-containter-link{
+	display:flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.wizard-containter-link a{ 
+	text-decoration: none;
+	text-align: center;
+}
+.wizard-containter-link p{
+	margin: 33px 0 -18px 0;
+	color:#666666;
+}
+.btn-continue{
+	height:44px;
+	width: 222px;
+	margin:45px 0 0 0;
+	background-color: #64d2a3;
+	color:white;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 44px;
+	text-align: center;
+	/*cursor: pointer;*/
+}
+.continue-explain {
+	margin:0 0 0 12%;
+	width:280px;
+	text-align: center;
+	font-size:3px;
+	-webkit-transform-origin-x: 0;
+	-webkit-transform: scale(0.70);
+}
+#continue-explain-booking-2{
+	margin:28px 15px 0 32px;
+	-webkit-transform-origin-x: 0;
+	-webkit-transform: scale(0.94);
+	color:black;
+}
+#continue-explain-booking-2 p{
+	color:#979797;
+}
+.continue-explain p{
+	margin:0;
+	color:#c3c3c3;
+}
+.btn-back{
+	display: flex;
+	justify-content: center;
+	margin:20px 0 40px 0;
+	color:#979797;
+	font-weight: bold;
+	font-size: 0.75em;
+	cursor: pointer;
+}
+.btn-back a{
+	color:#979797;
+	text-decoration: none;
+}
+.page-sign a{
+	text-decoration: none;
+}
+#sign-btn-back{
+	margin:60px 0 60px 0;
+}
+.btn-back i{
+	color:#c3c3c3;
+	margin:-3px 8px 0 0;
+}
+/*------------------booking_2---------------------*/
+.choose-therapist{
+	width: 455px;
+	margin:auto;
+	text-align: center;
+}
+.choose-therapist p{
+	margin-top: 20px;
+	font-weight: bold;
+	font-size: 1.3em;
+	color:#999999;
+}
+#text-bold{
+	color:#666666;
+	font-size: 1.4em;
+}
+.choose-therapist-image{
+	width:100%;
+	margin:40px 0 0 -5px;
+}
+.image-list{
+	display: flex;
+	margin-bottom:20px;
+}
+.image-list-single{
+	width:25%;
+	margin-left:10px;
+}
+.image-list img{
+	border:solid 1px #b1b1b1;
+	width: 100%;
+	height: auto;
+	cursor: pointer;
+	margin-bottom:2px;
+}
+#first_therapist img{
+	border:solid 7px  #65d0a2;
+}
+.image-list p{
+	display: none;
+}
+.image-list span{
+	font-size: 1.25em;
+	font-weight: bold;
+	color:#65d0a2;
+}
+.character{
+	padding:24px 36px 15px 36px;
+	background-color: #f2fdf7;
+	width:95%;
+	height:auto;
+	margin:15px 0 15px 2.5%;
+}
+.character h1{
+	font-size: 1.5em;
+	font-weight: bold;
+	color:#65d0a2;
+	margin:0;
+}
+.character p{
+	margin-top:5px;
+	/*color:black;*/
+	text-align:justify;
+	font-family: Gotham Bold;
+}
+/*------------------SIGN UP---------------------*/
+#signup-btn-facebook{
+	margin:25px 0 0 0;
+}
+#signup-btn-continue{
+	width:100%;
+	margin:40px 0 0 0;
+}
+#signup-bottom{
+	margin-bottom:56px;
+}
+/*--------------------LOGIN-------------------*/
+#login-btn{
+	width:100%;
+	margin-bottom:45px;
+}
+/*------------------PASSWORD-------------------*/
+#password-content{
+	margin-top:85px;
+}
+#password-massage-list{
+	margin-top: 25px;
+}
+#password-input{
+	height:44px;
+}
+#password-a{
+	width: 100%;
+}
+#password-btn{
+	width:100%;
+	margin:40px 0 190px 0;
+}
+
+/*-----mobile-----*/
+@media screen and (min-width: 561px) and (max-width:768px) {
+	.content{
+		width: 100%;
+		margin:auto;
+		margin-top:65px;
+	}
+	.btn-facebook{
+		border-radius: 3px;
+	}
+	#booking-wizard-containter-link{
+		margin:auto;
+		width:70%;
+	}
+	/*-------gign up-------*/
+	.sign-massage-list input{
+		height:44px;
+		border:solid 2px #f7f7f7;
+	}
+	#signup-btn-facebook{
+		border-radius: 1px;
+	}
+	#signup-bottom{
+		margin-bottom:40px;
+	}
+	/*-------login-------*/
+	#login-btn{
+		margin-bottom:85px;
+	}
+	/*---------password--------*/
+	#password-lazy{
+		width:100%;
+		padding-left:9%;
+		padding-right:9%;
+		margin-top: 30px;
+	}
+	#password-content{
+		margin-top:125px;
+		width: 100%;
+		margin:auto;
+		margin-top:90px;
+	}
+	#password-massage-list{
+		margin-top: 20px;
+	}
+	#password-massage-list p{
+		font-size: 1.25em;
+	}
+	#password-input{
+		height:60px;
+		border:solid 2px #f7f7f7;
+	}
+	#password-btn{
+		height:60px;
+		line-height: 60px;
+		font-size: 1.5em;
+		margin:54px 0 65px 0;
+	}
+}
+@media screen and  (max-width:561px){
+	.content{
+		width: 100%;
+		margin:auto;
+		margin-top:90px;
+	}
+	.pointer-list {
+		width:100%;
+		height:60px;
+	}
+	.pointer-list li {
+		line-height: 55px;
+	}
+	.pointer-list li a{
+		color:#dedede;
+		font-weight: bold;
+	}
+	.wizard-containter-sign{
+		width:100%;
+	}
+	.wizard-title{
+		padding-left:6%;
+		padding-right:6%;
+	}
+	.text-discribe{
+		font-size: 1.5em;
+		margin:0;
+		/*font-family: Arial;*/
+	}
+	.lazy{
+		width:100%;
+		padding-left:9%;
+		padding-right:9%;
+		margin-top: 23px;
+	}
+	.choose{
+		margin-top:5px;
+	}
+	.choose div{
+		margin:0 0 10px 0;
+		height:40px;
+		line-height: 40px
+	}
+	.btn-facebook{
+		border-radius: 3px;
+		height:37px;
+		line-height: 40px
+	}
+	.btn-facebook i{
+		margin-top: 11px;
+	}
+	.line{
+		height:40px;
+	}
+	.line div{
+		width:43%;
+	}
+	.line #or{
+		margin-top: -22px;
+		font-size: 1.15em;
+		width:14%;
+	}
+	.sign-massage-list p{
+		margin:15px 0 1px 0;
+		color:#979797;
+		font-size: 1em;
+		font-weight: bold;
+	}
+	.sign-massage-list input,.form-control{
+		width:100%;
+		height:45px;
+		border:solid 2px #f7f7f7;
+	}
+	.btn-continue{
+		width: 100%;
+		height:50px;
+		line-height: 50px
+		/*font-size:12px;*/
+	}
+	.continue-explain {
+		width:100%;
+		font-size:3px;
+		-webkit-transform-origin-x: 0;
+		-webkit-transform: scale(0.80);
+	}
+	.continue-explain p{
+		margin:0;
+	}
+	/*---booking_2----*/
+	.choose-therapist{
+		width: 100%;
+		padding-left:6%;
+		padding-right:6%;
+	}
+	.image-list{
+		margin-bottom:12px;
+	}
+	.image-list-single{
+		width:25%;
+		margin-left:7px;
+	}
+	.image-list span{
+		font-size: 1em;
+	}
+	.character{
+		width:100%;
+		margin:15px 0 0 0;
+		padding:20px 6.5% 15px 6.5%;
+	}
+	.character h1{
+		font-size: 1.35em;
+	}
+	.character p{
+		font-size: 0.95em;
+	}
+	.therapist-link{
+		padding-left:9%;
+		padding-right:9%;
+	}
+	.wizard-containter-link a{
+		font-size: 1.25em;
+		width: 100%;
+	}
+	#continue-explain-booking-2{
+		margin:10px 10% 0 10%;
+		-webkit-transform-origin-x: 0;
+		-webkit-transform: scale(1.0);
+		color:black;
+	}
+	.image-list-hidden{
+		display: none;
+	}
+	/*------password-----*/
+	#password-massage-list{
+		margin-top: 0;
+	}
+	#password-btn{
+		margin-bottom:245px;
+	}
+	/*-------login-------*/
+	#login-btn{
+		margin-bottom:75px;
+	}
+}

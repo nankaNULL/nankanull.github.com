@@ -1,0 +1,1455 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0,user-scalable=no" />
+    <title>検索結果一覧</title>
+    <link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="../css/search-result.css" rel="stylesheet" type="text/css" >
+    <link href='../css/head.css' rel='stylesheet' type='text/css'>
+    <link href='../css/pagetop.css' rel='stylesheet' type='text/css'>
+    <link href="../image/logo.ico" rel="shortcut icon">
+    <script type='text/javascript' src="../lib/jquery.js"></script>
+</head>
+<body>
+    <div class="ui-head-topcolor"></div>
+    <div class="ui-head-outline">
+        <div class="ui-head-firstline"> 
+            <i class="fa fa-angle-right anstyle"></i><a href="groupintro.html">会社概要</a>
+            <i class="fa fa-angle-right anstyle"></i><a href="http://ir.kadokawa.co.jp/recruit/" target="_blank fonstyle">採用情報</a>
+            <i class="fa fa-angle-right anstyle"></i><a href="http://www.kadokawa.co.jp/support/">お問い合わせ</a>
+            <i class="fa fa-angle-right anstyle"></i><a href="http://www.kadokawa.co.jp/similarsites/">関連サイト一覧</a>
+        </div>
+        <div class="ui-head-secondline">
+            <a href="index.html"><img src="../image/head-logo.png" class="picstyle"></a>
+            <div class="ui-head-search-out">
+                <form action="search-result.html" id="pcHeaderSearchForm">
+                    <div class="ui-head-search">
+                        <span class="ui-head-search-area">
+                            <select class="ui-head-search-order" name="sort">
+                                <option value="0">発売日順　　</option>
+                                <option value="1">関連度順　</option>
+                            </select>
+                            <b></b>
+                            <input type="search" name="kw" class="ui-head-search-input" placeholder="検索" maxlength="50">
+                        </span>
+                        <button type="button" class="fa fa-search fa-lg" id="searchstyle" style="cursor:pointer"></button>
+                    </div>
+                </form>
+                <a class="btn-head-search" href="search.html"><i class="fa fa-angle-right anstyle"></i>詳細検索</a>
+            </div>
+        </div>
+        <div class="ui-head-thirdline">
+            <span class="ui-head-thirdline-font1">よく検索されるキーワード</span>   
+            <a href="http://www.kadokawa.co.jp/product/search/?kw=%E3%81%B2%E3%82%8B%E3%81%AD%E5%A7%AB" class="ui-head-thirdline-block">ひるね姫</a>
+            <a href="/pr/b2/haruchika/" class="ui-head-thirdline-block">ハルチカ</a>
+            <a href="http://www.kadokawa.co.jp/product/search/?kw=%E3%82%AA%E3%83%BC%E3%83%90%E3%83%BC%E3%83%AD%E3%83%BC%E3%83%89" class="ui-head-thirdline-block">オーバーロード</a>
+            <a href="/product/321507000404/" class="ui-head-thirdline-block">うつヌケ</a><a href="/product/search/?kw=%E3%82%A8%E3%83%A1%E3%83%A9%E3%83%AB%E3%83%89&mgenre=23" class="ui-head-thirdline-block">エメラルド</a>
+            <a href="/product/search/?kw=ナミヤ雑貨店" class="ui-head-thirdline-block">ナミヤ雑貨店</a>
+            <a href="/product/search/?kw=%E5%90%9B%E3%81%AE%E5%90%8D%E3%81%AF%E3%80%82" class="ui-head-thirdline-block">君の名は。</a> 
+        </div>
+    </div>
+
+    <nav class="ui-head-contents">
+        <ul id="block"></ul>
+        <ul id="head-contents-sub">
+            <div class="shuline"></div>
+            <li><a href="#" class="drop" id="drop1">書籍<i class="fa fa-chevron-down contstyle"></i></a></li>
+            <div class="shuline"></div>
+            <li><a href="#" class="drop" id="drop2">ライトノベル<i class="fa fa-chevron-down contstyle"></i></a></li>
+            <div class="shuline"></div>
+            <li><a href="#" class="drop" id="drop3">コミック<i class="fa fa-chevron-down contstyle"></i></a></li>
+            <div class="shuline"></div>
+            <li><a href="#" class="drop" id="drop4">雑誌<i class="fa fa-chevron-down contstyle"></i></a></li>
+            <div class="shuline"></div>
+            <li><a href="#" class="drop" id="drop5">児童書<i class="fa fa-chevron-down contstyle"></i></a></li>
+            <div class="shuline"></div>
+            <li><a href="movie.html" class="drop" id="drop6">映画/音楽</a></li>
+            <div class="shuline"></div>
+            <li><a href="http://www.kadokawa.co.jp/category/goodsgame/e/" class="drop">グッズ/ゲーム</a></li>
+            <div class="shuline"></div>
+            <li><a href="http://ebook.kadokawa.co.jp/" target="_blank" class="drop">電子書籍</a></li>
+            <div class="shuline"></div>
+        </ul>
+        <ul id="block"></ul>
+    </nav>
+    <div class="ui-head-line"></div>
+
+    <!--   button1目录 -->
+    <div class="ui-drop">
+        <div class="ui-drop-firstline">
+            <a href="book_list.html" class="whitefont"><i class="fa fa-caret-right littletittle"></i> 書籍トップ</a>
+        </div>  
+        <div class="grayline"></div>
+        <div class="ui-drop-secondline">
+            <div class="whitefont">新刊から探す</div>
+            <div class="ui-drop-secondline-link">
+                <ul style="list-style-type:none">
+                    <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>新刊一覧</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grayline"></div>
+        <div class="ui-drop-thirdline">
+            <div class="ui-drop-thirdline-title">
+                <div class="whitefont">ジャンルから探す</div>
+            </div>
+            <div class="ui-drop-thirdline-link">
+                <ul class="ui-drop-thirdline-link-line" style="list-style-type:none">
+                    <li class="grayll"><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>小説・エッセイ</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>コミックエッセイ</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>ノンフィクション</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>人文・社会・自然科学</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>ビジネス</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right   blu"></i> <a href="search-result.html"><span>実用</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right   blu"></i> <a href="search-result.html"><span>学習参考書</span></a></li
+                        ><li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>学習書</span></a></li>
+                        <li class="sss"><i class="fa fa-chevron-right   blu"></i> <a href="search-result.html"><span>趣味</span></a></li>
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>イラスト集・写真集</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>図鑑・事典・辞書・語学</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>全集</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop-forthline">
+                <div class="ui-drop-forthline-title">
+                    <div class="whitefont">レーベルから探す</div>
+                </div>
+                <div class="ui-drop-forthline-link">
+                    <ul class="ui-drop-thirdline-link-line mi" style="list-style-type:none">
+                        <li><a href="search-result.html">角川ソフィア文庫</a></li>
+                        <li><a href="search-result.html">角川文庫</a></li>
+                        <li><a href="search-result.html">角川文庫（海外）</a></li>
+                        <li><a href="search-result.html">角川ホラー文庫</a></li>
+                        <li><a href="search-result.html">角川文庫キャラクター文芸</a></li>
+                        <li><a href="search-result.html">角川新書</a></li>
+                        <li><a href="search-result.html">角川選書</a></li>
+                        <li><a href="search-result.html">新人物文庫</a></li>
+                        <li><a href="search-result.html">中経の文庫</a></li>
+                        <li><a href="search-result.html">年賀状</a></li>
+                        <li><a href="search-result.html">富士見L文庫</a></li>
+                        <li><a href="search-result.html">富士見新時代小説文庫</a></li>
+                        <li><a href="search-result.html">幽ブックス</a></li>
+                        <li><a href="search-result.html">MF文庫ダ・ヴィンチ</a></li>
+                        <li><a href="search-result.html">TECHGIAN STYLE</a></li>
+                        <li><a href="search-result.html">ダ・ヴィンチブックス</a></li>
+                        <li><a href="search-result.html">メディアワークス文庫</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!--  2butto目录 -->
+        <div class="ui-drop2">
+            <div class="ui-drop-firstline">
+                <a href="book_list.html" class="whitefont"><i class="fa fa-caret-right littletittle"></i> ライトノベルトップ</a>
+            </div>  
+            <div class="grayline"></div>
+            <div class="ui-drop-secondline">
+                <div class="whitefont">新刊から探す</div>
+                <div class="ui-drop-secondline-link">
+                    <ul style="list-style-type:none">
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>新刊一覧</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop2-thirdline">
+                <div class="ui-drop2-thirdline-title">
+                    <div class="whitefont">ジャンルから探す</div>
+                </div>
+                <div class="ui-drop2-thirdline-link">
+                    <ul class="ui-drop2-thirdline-link-line" style="list-style-type:none">
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>青年ライトノベル</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>女性ライトノベル</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>BL</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>TL</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop-forthline">
+                <div class="ui-drop-forthline-title">
+                    <div class="whitefont">レーベルから探す</div>
+                </div>
+                <div class="ui-drop-forthline-link">
+                    <ul class="ui-drop-thirdline-link-line mi" style="list-style-type:none">
+                        <li><a href="search-result.html">角川スニーカー文庫</a></li>
+                        <li><a href="search-result.html">角川ビーンズ文庫</a></li>
+                        <li><a href="search-result.html">角川ルビー文庫</a></li>
+                        <li><a href="search-result.html">電撃ゲーム文庫</a></li>
+                        <li><a href="search-result.html">電撃文庫</a></li>
+                        <li><a href="search-result.html">富士見ドラゴンブック</a></li>
+                        <li><a href="search-result.html">富士見ファンタジア文庫</a></li>
+                        <li><a href="search-result.html">魔法のiらんど</a></li>
+                        <li><a href="search-result.html">魔法のiらんど文庫</a></li>
+                        <li><a href="search-result.html">B-PRINCE文庫</a></li>
+                        <li><a href="search-result.html">KCG文庫</a></li>
+                        <li><a href="search-result.html">MFブックス</a></li>
+                        <li><a href="search-result.html">MF文庫J</a></li>
+                        <li><a href="search-result.html">NOVEL 0</a></li>
+                        <li><a href="search-result.html">カドカワBOOKS</a></li>
+                        <li><a href="search-result.html">ジュエル文庫</a></li>
+                        <li><a href="search-result.html">ビーズログ文庫</a></li>
+                        <li><a href="search-result.html">ビーズログ文庫アリス</a></li>
+                        <li><a href="search-result.html">ファミ通文庫</a></li>
+                        <li><a href="search-result.html">フルール文庫　ルージュライン</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 3button目录 -->
+        <div class="ui-drop3">
+            <div class="ui-drop-firstline">
+                <a href="book_list.html" class="whitefont"><i class="fa fa-caret-right littletittle"></i> コミックトップ</a>
+            </div>  
+            <div class="grayline"></div>
+            <div class="ui-drop-secondline">
+                <div class="whitefont">新刊から探す</div>
+                <div class="ui-drop-secondline-link">
+                    <ul style="list-style-type:none">
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>新刊一覧</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop-thirdline">
+                <div class="ui-drop-thirdline-title">
+                    <div class="whitefont">ジャンルから探す</div>
+                </div>
+                <div class="ui-drop3-thirdline-link">
+                    <ul class="ui-drop3-thirdline-link-line" style="list-style-type:none">
+                        <li class="grayll"><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>少年コミック</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>少女コミック</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>青年コミック</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>女性コミック</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>BLコミック</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop3-forthline">
+                <div class="ui-drop3-forthline-title">
+                    <div class="whitefont">レーベルから探す</div>
+                </div>
+                <div class="ui-drop3-forthline-link">
+                    <ul class="ui-drop-thirdline-link-line mi" style="list-style-type:none">
+                        <li><a href="search-result.html">角川コミックス・エース</a></li>
+                        <li><a href="search-result.html">角川コミックス・エースエクストラ</a></li>
+                        <li><a href="search-result.html">電撃コミックス</a></li>
+                        <li><a href="search-result.html">電撃コミックスEX</a></li>
+                        <li><a href="search-result.html">電撃コミックスNEXT</a></li>
+                        <li><a href="search-result.html">電撃ジャパンコミックス</a></li>
+                        <li><a href="search-result.html">魔法のiらんどコミックス</a></li>
+                        <li><a href="search-result.html">B's-LOG COMICS</a></li>
+                        <li><a href="search-result.html">B's-LOVELY COMICS</a></li>
+                        <li><a href="search-result.html">CVSコミックス</a></li>
+                        <li><a href="search-result.html">MCコミックス</a></li>
+                        <li><a href="search-result.html">MFC キューンシリーズ</a></li>
+                        <li><a href="search-result.html">MFC ジーンピクシブシリーズ</a></li>
+                        <li><a href="search-result.html">MFコミックス</a></li>
+                        <li><a href="search-result.html">MFコミックス アライブシリーズ</a></li>
+                        <li><a href="search-result.html">MFコミックス ジーンシリーズ</a></li>
+                        <li><a href="search-result.html">MFコミックス フラッパーシリーズ</a></li>
+                        <li><a href="search-result.html">あすかコミックス</a></li>
+                        <li><a href="search-result.html">あすかコミックスCL-DX</a></li>
+                        <li><a href="search-result.html">あすかコミックスDX</a></li>
+                        <li><a href="search-result.html">シルフコミックス</a></li>
+                        <li><a href="search-result.html">ドラゴンコミックスエイジ</a></li>
+                        <li><a href="search-result.html">ビームコミックス</a></li>
+                        <li><a href="search-result.html1">ファミ通クリアコミックス</a></li>
+                        <li><a href="search-result.html">フルールコミックス</a></li>
+                        <li><a href="search-result.html">ニュータイプ100%コミックス</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 4button目录 -->
+        <div class="ui-drop4">
+            <div class="ui-drop-firstline">
+                <a href="book_list.html" class="whitefont"><i class="fa fa-caret-right littletittle"></i> 雑誌トップ</a>
+            </div>  
+            <div class="grayline"></div>
+            <div class="ui-drop-secondline">
+                <div class="whitefont">新刊から探す</div>
+                <div class="ui-drop-secondline-link">
+                    <ul style="list-style-type:none">
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>新刊一覧</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop3-thirdline">
+                <div class="ui-drop4-thirdline-title">
+                    <div class="whitefont">ジャンルから探す</div>
+                </div>
+                <div class="ui-drop3-thirdline-link">
+                    <ul class="ui-drop3-thirdline-link-line" style="list-style-type:none">
+                        <li class="grayll"><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>情報誌</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>実用誌</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>男性コミック誌</span></a></li>
+                        <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>女性コミック誌</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>ゲーム誌</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>児童誌</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>文芸誌</span></a></li>
+                        <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>教育誌・その他</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop4-forthline">
+                <div class="ui-drop4-forthline-title">
+                    <div class="whitefont">レーベルから探す</div>
+                </div>
+                <div class="ui-drop4-forthline-link">
+                    <ul class="ui-drop-thirdline-link-line mi" style="list-style-type:none">
+                        <li><a href="search-result.html">3分クッキング</a></li>
+                        <li><a href="search-result.html">B's-LOG</a></li>
+                        <li><a href="search-result.html">CD&DLでーた</a></li>
+                        <li><a href="search-result.html">CIEL</a></li>
+                        <li><a href="search-result.html">DENGEKI Girl'sStyle</a></li><li><a href="search-result.html">DVD＆ブルーレイでーた</a></li>
+                        <li><a href="search-result.html">Mei</a></li>
+                        <li><a href="search-result.html">spoon.</a></li>
+                        <li><a href="search-result.html">TECH GIAN</a></li>
+                        <li><a href="search-result.html">VOICE Newtype</a></li>
+                        <li><a href="search-result.html">ウォーカームック</a></li>
+                        <li><a href="search-result.html">ラーメンウォーカー</a></li>
+                        <li><a href="search-result.html">横浜ウォーカー</a></li>
+                        <li><a href="search-result.html">関西ウォーカー</a></li>
+                        <li><a href="search-result.html">九州ウォーカー</a></li>
+                        <li><a href="search-result.html">東海ウォーカー</a></li>
+                        <li><a href="search-result.html">東京ウォーカー</a></li>
+                        <li><a href="search-result.html">福岡ウォーカー</a></li>
+                        <li><a href="search-result.html">北海道ウォーカー</a></li>
+                        <li><a href="search-result.html">エンタミクス</a></li>
+                        <li><a href="search-result.html">ガンダムエース</a></li>
+                        <li><a href="search-result.html">キャラぱふぇ</a></li>
+                        <li><a href="search-result.html">コンプティーク</a></li>
+                        <li><a href="search-result.html">ザテレビジョン</a></li>
+                        <li><a href="search-result.html">月刊ザテレビジョン</a></li>
+                        <li><a href="search-result.html">サラブレ</a></li>
+                        <li><a href="search-result.html">ダ・ヴィンチ</a></li>
+                        <li><a href="search-result.html">てれびげーむマガジン</a></li>
+                        <li><a href="search-result.html">ドラゴンマガジン</a></li>
+                        <li><a href="search-result.html">ハルタ</a></li>
+                        <li><a href="search-result.html">ぴこぷり</a></li>
+                        <li><a href="search-result.html">ヤングエース</a></li>
+                        <li><a href="search-result.html">レタスクラブ</a></li>
+                        <li><a href="search-result.html">レタスクラブMOOK</a></li>
+                        <li><a href="search-result.html">歌ってみたの本</a></li>
+                        <li><a href="search-result.html">花時間</a></li>
+                        <li><a href="search-result.html">月刊ASUKA</a></li>
+                        <li><a href="search-result.html">月刊コミックアライブ</a></li>
+                        <li><a href="search-result.html">月刊コミックキューン</a></li>
+                        <li><a href="search-result.html">月刊コミックジーン</a></li>
+                        <li><a href="search-result.html">月刊コミックビーム</a></li>
+                        <li><a href="search-result.html">月刊コミックフラッパー</a></li>
+                        <li><a href="search-result.html">月刊コミック電撃大王</a></li>
+                        <li><a href="search-result.html">月刊コンプエース</a></li>
+                        <li><a href="search-result.html">月刊ニュータイプ</a></li>
+                        <li><a href="search-result.html">月刊ブシロード</a></li>
+                        <li><a href="search-result.html">月刊少年エース</a></li>
+                        <li><a href="search-result.html">月刊星ナビ</a></li>
+                        <li><a href="search-result.html">週刊ファミ通</a></li>
+                        <li><a href="search-result.html">小説 野性時代</a></li>
+                        <li><a href="search-result.html">短歌</a></li>
+                        <li><a href="search-result.html1">電撃G's magazine</a></li>
+                        <li><a href="search-result.html">電撃G'sコミック</a></li>
+                        <li><a href="search-result.html">電撃Nintendo</a></li>
+                        <li><a href="search-result.html">電撃PlayStation</a></li>
+                        <li><a href="search-result.html">電撃文庫MAGAZINE</a></li>
+                        <li><a href="search-result.html">コミック電撃だいおうじ</a></li>
+                        <li><a href="search-result.html">電撃マオウ</a></li>
+                        <li><a href="search-result.html">電撃萌王</a></li>
+                        <li><a href="search-result.html">娘TYPE</a></li>
+                        <li><a href="search-result.html">俳句</a></li>
+                        <li><a href="search-result.html">別冊カドカワ</a></li>
+                        <li><a href="search-result.html">本の旅人</a></li>
+                        <li><a href="search-result.html">毎日が発見</a></li>
+                        <li><a href="search-result.html">幽</a></li>
+                        <li><a href="search-result.html">歴史読本</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 5butto目录 -->
+        <div class="ui-drop5">
+            <div class="ui-drop-firstline">
+                <a href="book_list.html" class="whitefont"><i class="fa fa-caret-right littletittle"></i> 児童書トップ</a>
+            </div>  
+            <div class="grayline"></div>
+            <div class="ui-drop-secondline">
+                <div class="whitefont">新刊から探す</div>
+                <div class="ui-drop-secondline-link">
+                    <ul style="list-style-type:none">
+                        <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>新刊一覧</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="grayline"></div>
+            <div class="ui-drop3-thirdline">
+                <div class="ui-drop4-thirdline-title">
+                    <div class="whitefont">ジャンルから探す</div>
+                </div>
+                <div class="ui-drop3-thirdline-link">
+                  <ul class="ui-drop3-thirdline-link-line" style="list-style-type:none">
+                    <li class="grayll"><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>絵本</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>読み物</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>図鑑・辞典</span></a></li>
+                    <li class="grayll"><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>英語の本＆絵本・学習</span></a></li>
+                    <li><i class="fa fa-chevron-right  blu"></i> <a href="search-result.html"><span>まんが学習書</span></a></li>
+                    <li><i class="fa fa-chevron-right blu"></i> <a href="search-result.html"><span>ムック・趣味</span></a></li>
+                    <li><i class="fa fa-chevron-right   blu"></i> <a href="search-result.html"><span>ゲーム</span></a></li>
+                    <li><i class="fa fa-chevron-right   blu"></i> <a href="search-result.html"><span>知育</span></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="grayline"></div>
+        <div class="ui-drop5-forthline">
+            <div class="ui-drop5-forthline-title">
+                <div class="whitefont">レーベルから探す</div>
+            </div>
+            <div class="ui-drop5-forthline-link">
+                <ul class="ui-drop-thirdline-link-line mi" style="list-style-type:none">
+                    <li><a href="search-result.html">角川つばさ文庫</a></li><li><a href="search-result.html">角川まんが学習シリーズ</a></li><li><a href="search-result.html">海外児童書</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="body">
+        <div class="head">
+            <a href="search.html" class="search">検索</a>
+            <i class="fa fa-angle-right angle-style"></i>
+            <span class="search-result">検索結果</span>
+        </div>
+        <div class="list">
+            <span class="search-result-list">検索結果一覧</span>
+        </div>
+        <div class="ui-body">
+            <div id="ui-leftbody" class="ui-leftbody">
+                <div class="ui-leftbody-item1">
+                    <span class="ui-leftbody-item1-title1">ジャンルで絞り込む</span>
+                    <span class="ui-leftbody-item1-title2">コミック</span>
+                    <div class="ui-leftbody-item1-content">
+                        <a href="bookintro-2.html">少年コミック</a>
+                        <span class="ui-leftbody-item1-number">(799)</span>
+                    </div>
+                    <div class="ui-leftbody-item1-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&mgenre=17">少女コミック</a>
+                        <span class="ui-leftbody-item1-number">(395)</span>
+                    </div>
+                    <div class="ui-leftbody-item1-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&mgenre=18">青年コミック</a>
+                        <span class="ui-leftbody-item1-number">(11,781)</span>
+                    </div>
+                    <div class="ui-leftbody-item1-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&mgenre=19">女性コミック</a>
+                        <span class="ui-leftbody-item1-number">(3,179)</span>
+                    </div>
+                    <div class="ui-leftbody-item1-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&mgenre=20">BLコミック</a>
+                        <span class="ui-leftbody-item1-number">(760)</span>
+                    </div>
+                </div>
+                <div id="ui-leftbody-item2" class="ui-leftbody-item2">
+                    <div class="ui-leftbody-item2-title">レーベルで絞り込む</div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="bookintro-3.html">幽ブックス</a>
+                        <span class="ui-leftbody-item1-number">(1)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=106">角川コミックス・エース</a>
+                        <span class="ui-leftbody-item1-number">(3100)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=107">角川コミックス・エースエクストラ</a>
+                        <span class="ui-leftbody-item1-number">(116)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=321">電撃コミックス</a>
+                        <span class="ui-leftbody-item1-number">(1,670)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=322">電撃コミックスEX</a>
+                        <span class="ui-leftbody-item1-number">(658)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=323">電撃コミックスNEXT</a>
+                        <span class="ui-leftbody-item1-number">(518)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=324">電撃ジャパンコミックス</a>
+                        <span class="ui-leftbody-item1-number">(101)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=354">魔法のiらんどコミックス</a>
+                        <span class="ui-leftbody-item1-number">(36)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=15">B's-LOG COMICS</a>
+                        <span class="ui-leftbody-item1-number">(564)</span>
+                    </div>
+                    <div class="ui-leftbody-item2-content">
+                        <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=16">B's-LOVELY COMICS</a>
+                        <span class="ui-leftbody-item1-number">(200)</span>
+                    </div>
+                    <div class="hide"> 
+                        <div class="ui-leftbody-item2-content1">
+                            <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=24">CVSコミックス</a>
+                            <span class="ui-leftbody-item1-number">(232)</span>
+                        </div>
+                        <div class="ui-leftbody-item2-content2">
+                            <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=41">MCコミックス</a>
+                            <span class="ui-leftbody-item1-number">(521)</span>
+                        </div>
+                        <div class="ui-leftbody-item2-content2">
+                            <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=44">MFC キューンシリーズ</a>
+                            <span class="ui-leftbody-item1-number">(49)</span>
+                        </div>
+                        <div class="ui-leftbody-item2-content2">
+                            <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=84">あすかコミックス</a>
+                            <span class="ui-leftbody-item1-number">(1,080)</span>
+                        </div>
+                        <div class="ui-leftbody-item2-content2" style="margin-bottom: -30px;">
+                            <a href="http://www.kadokawa.co.jp/product/search/?releaseDate=1&lgenre=3&sort=&label=151">シルフコミックス</a>
+                            <span class="ui-leftbody-item1-number">(310)</span>
+                        </div>
+                    </div> 
+                    <p class="view-increase"><a href="#">+表示を増やす</a></p>
+                </div>
+                <div class="ui-leftbody-item3">
+                    <div class="ui-leftbody-item3-sub1">
+                        <span class="ui-leftbody-item3-title1">条件で絞り込む</span>
+                        <span class="ui-leftbody-item3-title2">発売状況</span>
+                        <div><input id="checkbox-1" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1" style="vertical-align:middle;"></label>
+                            <span>発売中の商品</span>
+                        </div>
+                        <div><input id="checkbox-2" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-2" style="vertical-align:middle;"></label>
+                            <span>近日発売予定の商品</span>
+                        </div>
+                    </div>
+                    <div class="ui-leftbody-item3-sub2">
+                        <span class="ui-leftbody-item3-title2">商品形態</span>
+                        <div><input id="checkbox-3" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-3" style="vertical-align:middle;"></label>
+                            <span >文庫</span>
+                        </div>
+                        <div><input id="checkbox-4" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-4" style="vertical-align:middle;"></label>
+                            <span >電子書籍</span>
+                        </div>
+                    </div>
+                    <div class="ui-leftbody-item3-sub3">
+                        <span class="ui-leftbody-item3-title2">ブランド</span>  
+                        <div><input id="checkbox-1-1" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-1" style="vertical-align:middle;"></label>
+                            <span >アスキー・メディアワークス</span>
+                        </div>
+                        <div><input id="checkbox-1-2" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-2" style="vertical-align:middle;"></label>
+                            <span >エンターブレイン</span>
+                        </div>
+                        <div><input id="checkbox-1-3" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-3" style="vertical-align:middle;"></label>
+                            <span >角川書店</span>
+                        </div>
+                        <div><input id="checkbox-1-4" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-4" style="vertical-align:middle;"></label>
+                            <span >角川マガジンズ</span>
+                        </div>
+                        <div><input id="checkbox-1-5" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-5" style="vertical-align:middle;"></label>
+                            <span >中経出版</span>
+                        </div>
+                        <div><input id="checkbox-1-6" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-6" style="vertical-align:middle;"></label>
+                            <span >富士見書房</span>
+                        </div>
+                        <div><input id="checkbox-1-7" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-7" style="vertical-align:middle;"></label>
+                            <span >メディアファクトリー</span>
+                        </div>
+                        <div><input id="checkbox-1-8" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-8" style="vertical-align:middle;"></label>
+                            <span >ＫＡＤＯＫＡＷＡ</span>
+                        </div>
+                        <div><input id="checkbox-1-9" type="checkbox" class="regular-checkbox" style="vertical-align:middle;">
+                            <label for="checkbox-1-9" style="vertical-align:middle;"></label>
+                            <span >カドカワ</span>
+                        </div>
+                        <input type=button id="search-button" onclick="search_button()" class="bottom-button" value="絞り込む" />
+                    </div>
+                </div>
+            </div>
+            <div class="ui-rightbody">
+                <div class="ui-rightbody-title1">
+                    <div class="search-word">検索ワード</div>
+                </div>
+                <div class="ui-rightbody-title1-line">
+                    <div class="ui-rightbody-title1-line1"></div>
+                    <div class="ui-rightbody-title1-line2"></div>
+                </div>
+                <div class="ui-rightbody-title2">
+                    <div class="information">
+                        <span class="search-result-word">検索結果</span>
+                        <span class="search-result-count">17,804</span>
+                        <span class="search-result-word">件</span>
+                    </div>
+                    <div class="button" >
+                        <i class="fa fa-th-list button-height"></i>&nbsp<span class="detailed-button">詳細 </span>
+                    </div>
+                </div>
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="bookintro-4.html" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-1.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="bookintro-4.html" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>けものフレンズ　こみっくあんそろじー じゃぱりまん編</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>いろんなフレンズのまんががよめるよ♪</span>
+                            </div>
+                            <div class="book-author">
+                                <span>原作 けものフレンズプロジェクト</span><span class="book-author1"> 編集 アライブ編集部</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 680円 &nbsp (本体630円＋税)</span><span class="book-date">発売日：2017年05月29日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="bookintro-4.html">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de09b785e2-a214-431e-985f-02d0a31ceb2a/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321612000309/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-2.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321612000309/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>佐々木と宮野　２</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>BL展開断固拒否な"男子高生の日常"（Boys　Life）コミック!!</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 春園ショウ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 594円 &nbsp (本体550円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321612000309/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/deabed1fc2-64b6-463a-88d6-7752b535efc6/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321612000314/" style="text-decoration:none">
+                            <img src="../image/search-3.jpg" class="image1">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321612000314/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ひなこのーと　ラジオＣＤ付き限定版　４</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>ＴＶアニメ2017年４月より放送開始！ラジオＣＤ付き限定版第４巻！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 三月</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 1,404円 &nbsp (本体1,300円＋税)</span><span class="book-date">発売日：2017年05月29日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321612000314/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="http://www.kadokawa.co.jp/product/321612000314/" style="text-decoration:none">
+                                <div class="reading-ebook-button"></div>
+                                <div class="ebook-description"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321612000316/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-4.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321612000316/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ひなこのーと　　４</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>ＴＶアニメ好評放送中！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 三月</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 648円 &nbsp (本体600円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321612000316/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/def76850c6-9c40-47a4-b4e3-c072cf8526e3/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000100/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-5.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000100/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>あしょんでよッ　～うちの犬ログ～　（4）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>あくび姿もか～わい～い☆　だいすきわんちゃんエッセイまんが！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 らくだ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 594円 &nbsp (本体550円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000100/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de8f02dfb9-a0fb-4a37-9f34-dc3bc6f643ab/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000102/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-6.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000102/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ヤモリ先輩といっしょでいいんじゃね？２</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>妖怪いーっぱいなゲスい毎日!!</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 さだうおじ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 594円 &nbsp (本体550円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-sign">レーベル：MFコミックス ジーンシリーズ</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000102/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/deb6ff273b-e9a7-4b62-a05c-d5ce22bd8b5e/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000103/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-7.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000103/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>いじめっ子といじめられっ子のビターな恋物語　１</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>学校ではいじめっ子といじめられっ子。でも…わたしたち実は――</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 十虎</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 594円 &nbsp (本体550円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000103/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/dea2f75a24-471b-4629-9df1-f5ea43d54dfc/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000165/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-8.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000165/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ラブライブ！（５）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>音ノ木坂を廃校から救うため、スクールアイドル「μ’s」羽ばたく！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>原作 公野　櫻子 作画 鴇田　アルミ キャラクターデザイン 室田　雄平</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 648円 &nbsp (本体600円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-sign">レーベル：電撃コミックス</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000165/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321702000437/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-9.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321702000437/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>狼と香辛料（１５）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>敗色濃厚――老獪な兎と賢狼の次なる一手は？</span>
+                            </div>
+                            <div class="book-author">
+                                <span>作画 小梅　けいと 原作 支倉　凍砂 キャラクターデザイン 文倉　十</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 616円 &nbsp (本体570円＋税)</span><span class="book-date">発売日：2017年05月27日</span><span class="book-sign">レーベル：電撃コミックス</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321702000437/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321606000418/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-10.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321606000418/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>プランダラ　（７）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>廃棄戦争勃発！そして、英雄が目覚める…！離人は仲間の危機を救えるか？</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 水無月　すう</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321606000418/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321612000554/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-11.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321612000554/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ぼくとぬえちゃんの百一鬼夜行　（３）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>ぬえちゃんが消されちゃう！夢を食べる妖怪に、柳太は勝てるのか！？</span>
+                            </div>
+                            <div class="book-author">
+                                <span>原作 大塚　英志 作画 樹生　ナト</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321612000554/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000093/" style="text-decoration:none">
+                            <img src="../image/search-12.jpg" class="image1">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000093/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>鉄鍋のジャン！　1</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>料理は勝負だ！孤高の若手料理人・秋山醤(ジャン)の魔法を見よ！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 西条　真二 監修 おやまけいこ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 360円 &nbsp (本体333円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：CVSコミックス</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000093/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="http://www.kadokawa.co.jp/product/321701000093/" style="text-decoration:none">
+                                <div class="reading-ebook-button"></div>
+                                <div class="ebook-description"></div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000428/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-13.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000428/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ガンダム　Ｇのレコンギスタ（４）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>ザンクト・ポルトからトワサンガへ。宇宙、モビルスーツ戦開幕！！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 太田　多門 作 富野　由悠季 区分表記なし サンライズ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000428/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000429/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-14.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000429/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ガンダム　Ｇのレコンギスタ（５）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>G‐セルフ強奪計画！ トワサンガ宙域で四つ巴の攻防！！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 太田　多門 作 富野　由悠季 区分表記なし サンライズ</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000429/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000436/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-15.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000436/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>リトルウィッチアカデミア　（１）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>ＴＲＩＧＧＥＲが紡ぐ魔法ファンタジーをコミック化！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>漫画 左藤圭右 原作 TRIGGER／吉成　曜</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000436/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321701000437/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-16.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321701000437/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>高機動無職ニーテンベルグ　（５）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>無職vs社畜、宇宙を舞台に最終決戦！</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 青木　ハヤト</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：角川コミックス・エース</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321701000437/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321702000431/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-17.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321702000431/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>同居人が不安定でして（２）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>しっかりさん、不安定さんを甘やかし疑惑浮上中!?</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 タカダ　フミ子</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 616円 &nbsp (本体570円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：電撃コミックスNEXT</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321702000431/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321702000432/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-18.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321702000432/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>ゾンビ先生に噛まれたい（１）</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>この恋は感染する!?　学園ハーレムパンデミック!!!</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 亀小屋　サト</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 626円 &nbsp (本体580円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：電撃コミックスNEXT</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321702000432/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item1">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321702000434/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-19.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321702000434/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>魔王ビギナーのHow　To　世界征服（１</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>没落家業を立て直せ！　不景気に負けない異世界ビジネス4コマコメディ♪</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 むらたたいち</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 616円 &nbsp (本体570円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：電撃コミックスNEXT</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321702000434/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ui-rightbody-item2">
+                    <div class="book">
+                        <a href="http://www.kadokawa.co.jp/product/321702000436/" style="text-decoration:none">
+                            <img src="../image/search_ebook.png" class="ebook">
+                            <img src="../image/search-20.jpg" class="image">
+                        </a>
+                    </div>
+                    <div class="book-detail">
+                        <a href="http://www.kadokawa.co.jp/product/321702000436/" style="text-decoration:none">
+                            <div class="book-title">
+                                <span>この美術部には問題がある！８</span>
+                            </div>
+                            <div class="book-introduction">
+                                <span>最新第８巻！ 宇佐美さんの片思いっぷりはますます絶好調!!</span>
+                            </div>
+                            <div class="book-author">
+                                <span>著者 いみぎむる</span>
+                            </div>
+                            <div class="book-price">
+                                <span>定価 &nbsp 616円 &nbsp (本体570円＋税)</span><span class="book-date">発売日：2017年05月26日</span><span class="book-sign">レーベル：電撃コミックスNEXT</span><span class="book-size">判型：Ｂ６判</span>
+                            </div>
+                        </a> 
+                    </div>
+                    <div class="book-reading">
+                        <div class="book-reading-title">
+                            <a href="http://www.kadokawa.co.jp/product/321702000436/">
+                                <div class="book-reading-title"></div>
+                            </a>
+                        </div>
+                        <div class="reading-button">
+                            <a href="https://bookwalker.jp/de1cd2ec6f-f0fd-4911-9e29-25a80123717d/?adpcnt=7qM_Nkp&sample=1&from=1" target="_blank" style="text-decoration:none">
+                                <div class="reading-ebook-button">
+                                    <div class="ebook-button" value="試し読みをする">試し読みをする</div>
+                                </div>
+                                <div class="ebook-description">
+                                    <img src="../image/ebook_description.png" class="ebook_description">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="more-result"><p><span>もっと見る</span></p></div>
+                <a href="search.html" class="research" target="_blank" style="text-decoration: none;">
+                    <div class="re-search">再検索</div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="pagetop">
+        <i class="fa fa-chevron-up"></i>
+    </div>
+    <script type='text/javascript' src="../js/search-result.js"></script>
+    <script type="text/javascript" src="../js/head.js"></script>
+    <script type="text/javascript" src="../js/pagetop.js"></script>
+    <object style="" type="text/x-scriptlet" data="bottom.html" width=100% height=110 class="bottom"></object>
+</body>
+</html>

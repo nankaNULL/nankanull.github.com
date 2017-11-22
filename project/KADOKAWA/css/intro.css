@@ -1,0 +1,65 @@
+*{margin:0 ;padding:0}
+body{
+min-width: 1280px;
+}
+.ui-intro-head{
+	width: 100%;
+	height: 114px;
+	background-color: rgb(52,53,117);
+	display: flex;
+}
+.ui-intro-head-logo{
+	margin-left: 14.8%;
+	width: 290px;
+	height: 40px;
+	margin-top: 37px;
+}
+.ui-intro-head a:hover{
+    opacity:0.4;
+	filter:alpha(opacity=40);
+	transition: all 0.3s linear 0s;
+}
+.ui-intro-shuline{
+	width: 1px;
+	height: 30px;
+	margin-top: 60px;
+	background-color:rgb(131,135,173);
+	margin-left: 2%;
+	margin-right: 2%;
+}
+.toup{
+	margin-top: 50px;
+}
+.toblock1{
+	margin-left: 70%;
+}
+.toblock2{
+	margin-left: 10%;
+}
+.ui-intro-head-4{
+	height: 53px;
+	width: 65px;
+	margin-top: 49px;
+}
+.ui-intro-head-select{
+	display: block;
+	height: 24px;
+	width: 24px;
+	background-color: rgb(52,53,117);
+	border: 1px solid rgb(219,219,219);
+	margin-top: 60px;
+	margin-right: 1px;
+	text-align: center;
+	color: white;
+	font-size:12px;
+	text-decoration: none;
+	line-height: 22px;
+}
+.ui-intro-head-selectout{
+	display: flex;
+}
+.ui-intro-head-selectout a:hover{
+    background-color: rgba(255,100,0,1);
+    opacity:1;
+    filter:alpha(opacity=40);
+}

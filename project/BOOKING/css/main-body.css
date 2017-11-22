@@ -1,0 +1,268 @@
+html,body{
+	margin:0;
+	padding: 0;
+	height: 100%;
+}
+.main-toppic{
+	width: 100%;
+}
+.main-book{
+	height: 396px;
+}
+.main-title{
+	color: rgb(101,210,164);
+	font-size: 34px;
+	margin-top: 80px;
+}
+.main-book-subtitle{
+	font-size: 22px;
+	margin:0;
+}
+.main-book-buttom-block{
+	margin-top: 12%;
+}
+.main-book-buttom{
+	background-color: rgb(217,251,234);
+	padding-bottom: 3%;
+}
+.main-book-mobile-buttom{
+	display: none;
+	background-color:white;
+	padding-bottom: 3%;
+}
+.main-book-buttom-home,.main-book-buttom-day,.main-book-buttom-time{
+	display: block;
+}
+.main-book-message{
+	width: 80%;
+	margin-left: 30%;
+	margin-top: -50px;
+	color: rgba(136,148,142,0.8);
+	font-size: 18px;
+}
+.main-book-logo{
+	font-size: 65px;
+	color:rgb(100,210,163);
+}
+.profession-person-total{
+	float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;
+    margin-top: 85px;
+    margin-bottom: 100px;
+}
+.profession-mobile{
+	display: none;
+	margin-top: 85px;
+}
+.blue-outer{
+	border:2px solid rgb(217,251,234);
+}
+.main-button{
+	float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;
+	background-color:rgba(100,210,163,1);
+	color: white;
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	width: 20%;
+}
+.main-profession-button{
+	float: none;  
+    display: block;  
+    margin-left: auto;  
+    margin-right: auto;
+	background-color:rgba(100,210,163,1);
+	color: white;
+	height: 40px;
+	font-size: 16px;
+	font-weight: bold;
+	line-height: 40px;
+	text-align: center;
+	width: 20%;
+	margin-top: 95px;
+	margin-bottom: 130px
+}
+.main-chose{
+	background-color: rgb(242,253,247);
+	color: rgba(136,148,142,0.8);
+}
+.main-chose-mobile{
+	display: none;
+}
+.main-chose-mobile-item{
+	height: 128px;
+	margin: 4%;
+}
+.main-chose-pic{
+	margin-top: 30px;
+}
+.main-chose-subtitle{
+	color: rgb(100,210,163);
+	font-size: 24px;
+}
+.simple-item-num{
+	font-weight: bolder;
+	font-size: 22px;
+	color: rgb(100,211,165);
+}
+.simple-item-min{
+	color: rgba(136,148,142,0.8);
+	font-size: 18px;
+	font-weight: normal;
+}
+.main-simple{
+	width: 100%;
+	height: 500px;
+}
+.main-simple-subtitle{
+	color: rgba(102,102,102,0.8);
+	font-size: 18px;
+	font-weight: bold;
+	margin-bottom: 30px;
+}
+.simple-item-cost{
+    color: rgba(136,148,142,0.8);
+	font-size: 22px;
+	font-weight: normal;
+}
+.simple-item-line{
+	margin-top: 10px;
+	margin-bottom: 14px;
+	border-bottom: 1px solid rgb(217,251,234);
+}
+.main-asked{
+	background-color: rgb(242,253,247);
+	margin-top: 80px;
+	color: rgb(102,102,102);
+}
+.main-asked-circle{
+	display: none;
+    color: rgb(100,210,163);
+    font-size: 20px;
+    margin-right:5px;
+}
+.main-asked-mobile{
+	display: none;
+	color: rgba(102,102,102,0.8);
+	margin-left: 0;
+	margin-right: 0;
+	margin-bottom: 10px;
+}
+.main-asked-subtitle{
+	color: rgb(100,210,163);
+	font-size: 18px;
+}
+.main-asked-buttomblock{
+	height: 70px;
+}
+.main-contactus{
+	height: 854px;
+}
+.main-contactus-subtitle{
+	font-size: 18px;
+	color: rgb(102,102,102);
+	margin-top: 30px;
+}
+.main-contactus-phone{
+	color: rgb(102,102,102);
+	font-size: 14px;
+	font-weight: bolder;
+}
+.main-contactus-num{
+	color: rgb(102,102,102);
+	font-size: 14px;
+}
+.main-contactus-name,.main-contactus-email,.main-contactus-message{
+	display: block;
+	margin: 0 auto;
+}
+.main-contactus-name,.main-contactus-email{
+	height: 38px;
+	width: 27.5%;
+	margin-bottom: 10px;
+}
+.main-contactus-message{
+	height: 303px;
+	width: 27.5%;
+}
+@media screen and (min-width: 1025px) 
+{
+	.main-book-message{
+		margin-left: 20%;
+	}
+}
+/*-----------mobile-------------*/
+@media screen and (max-width: 735px) 
+{
+	.main-profession,.main-contactus{
+		background-color: rgb(242,253,247);
+	}
+	.main-chose,.main-asked{
+		background-color: white;
+	}
+	.main-simple-item{
+		width: 100%;
+		margin-bottom: 20px;
+		background-color: rgb(217,251,234);
+        height: 54px;
+	}
+	.simple-item-line{
+		border: none;
+	}
+	.main-title{
+		font-size: 20px;
+	}
+	.main-book-subtitle{
+		font-size: 14px;
+	}
+	.main-contactus-subtitle{
+		font-size: 14px;
+	}
+	.main-contactus-phone,.main-contactus-num{
+		font-size: 10px;
+	}
+	.main-contactus-name,.main-contactus-email{
+		width: 88%;
+		height: 42px;
+		line-height: 40px;
+	}
+	.main-contactus-message{
+		width: 88%;
+		height: 312px;
+		line-height: 40px;
+	}
+	.main-button{
+        width: 50%;
+	}
+	.main-profession-button{
+		width: 50%;
+		margin-top: 70px;
+		margin-bottom: 60px;
+	}
+	.simple-item-num,.simple-item-min{
+		color: rgba(136,148,142,0.8);
+		font-weight: bolder;
+	}
+	.simple-item-num,.simple-item-min,.simple-item-cost{
+		line-height: 50px;
+	}
+	.main-book-message{
+        width: 100%;
+        margin-top: 10px;
+	}
+	.main-book-buttom,.profession-person-total,.main-chose-item,.main-asked-item,.main-asked-subtitle{
+		display: none;
+	}
+	.main-asked-circle,.main-chose-mobile,.profession-mobile,.main-asked-mobile,.main-book-mobile-buttom{
+		display: block;
+	}
+ }
+
+

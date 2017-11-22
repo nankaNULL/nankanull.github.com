@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+	<head lang="en">
+	    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+	    <meta charset="UTF-8">
+	    <title>BOOKING | LOGIN</title>
+	    <link href="../lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+		<link href="../lib/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+		<link href="../css/booking_3_login.css" rel="stylesheet">
+		<link href="../css/head.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">     
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">导航条</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand massage">
+                    <span class="Mobile-text">Mobile</span>
+                    <span class="massage-text">massages</span>
+                </span>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking-1.html">Booking</a></li>
+                    <li><a href="therapist.html">Therapist</a></li>
+                    <li><a href="chose.html">Styles</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="massage.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a target="_blank" class="sign" href="login.html">Sign In</a></li>
+                </ul>               
+            </div>
+        </div>
+    </nav>
+		<div class='content'>
+			<div class="pointer-list">
+				<ul >
+					<li id='step1'>1</li>
+					<li >2</li>
+					<li id='number_bold'>3</li>
+					<li >4</li>
+				</ul>
+			</div>
+			<div class='wizard-containter-sign'>
+				<div class='wizard-title'>
+					<p class='text-discribe'>Create your account or sign in</p>
+					<span class='text-discribe'>to your existing account to continue</span>
+				</div>
+				<div class='lazy'>
+					<div class='choose'>
+						<form>
+							<div class='choose-background' id='choose-signup'>
+								<input type="radio" checked="checked" name="choose" value="sign" />
+								<label for="sign">I'm a new customer</label>
+							</div>
+							<div class='choose-background' id='choose-login'>
+								<input type="radio" name="choose" value="login" />
+								<label for="login">I have an account</label>
+							</div>
+						</form>
+					</div>
+					<div class='btn-facebook'>
+						<i class='fa fa-facebook-f'></i>
+						<p>Sign up with Facebook</p>
+					</div>
+					<div class='line'>
+						<div></div>
+						<div id='or'>or</div>
+						<div></div>
+					</div>
+					<!-- SIGN UP | LOGIN -->
+					<div class='page-sign'>
+						<div class='sign-massage'>
+							<div class='sign-massage-list'>
+								<p>First Name</p>
+								<input type="text" class='text-style'>
+							</div>
+							<div class='sign-massage-list'>
+								<p>Last Name</p>
+								<input type="text" class='text-style'>
+							</div>
+							<div class='sign-massage-list'>
+								<p>Emall address</p>
+								<input type="text" class='text-style'>
+							</div>
+							<div class='sign-massage-list'>
+								<p>Mobile number</p>
+								<input type="text" class='text-style'>
+							</div>
+							<div class='sign-massage-list'>
+								<p>Choose a password</p>
+								<input type="text" class='text-style'>
+							</div>
+						</div>
+						<div class='wizard-containter-link'>
+							<a href="booking-4.html"><div class='btn-continue'>CONTINUE</div></a>
+						</div>
+						<div class='continue-explain'>
+							<p>By clicking "Continue" above,you are agree to our Terms of Service agreement</p>
+						</div>
+						<a href="booking_2.html">
+							<div class='btn-back'>
+								<i class='fa-2x fa fa-angle-left'></i>
+								<div>Back</div>
+							</div>
+						</a>
+					</div>
+					<div class='page-login'>
+						<div class='sign-massage'>
+							<div class='sign-massage-list'>
+								<p>Emalll address</p>
+								<input type="text" class='text-style'>
+							</div>
+							<div class='sign-massage-list'>
+								<p>Password</p>
+								<input type="text" class='text-style'>
+							</div>
+						</div>
+						<div class='wizard-containter-link'>
+							<a href="password.html"><p>Forgot Password？</p></a>
+							<a href="booking-4.html"><div class='btn-continue'>CONTINUE</div></a>
+							<a href="booking_2.html"><div class='btn-back' id='sign-btn-back'>
+								<i class='fa-2x fa fa-angle-left'></i>
+								<div>Back</div>
+							</div></a>
+						</div>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+		<script src="../lib/jquery.js"></script>
+		<script src="../lib/bootstrap/js/bootstrap.js"></script>
+		<script src="../js/booking_3_login.js"></script>
+	</body>
+	<object type="text/x-scriptlet" data="footer.html" class="bottom" width=100% height=200></object>
+</html>

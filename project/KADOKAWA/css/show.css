@@ -1,0 +1,18 @@
+@charset "UTF-8";
+.ui-slick{
+	margin:5% 10% 0 10%;
+}
+.ui-slick-main img{
+	width:100%;
+	height:auto;
+}
+.ui-slick-main img:hover{
+	opacity: 0.4;
+	transition: all 0.3s linear;
+}
+.explain{
+	display: flex;
+	justify-content: center;
+	margin-left:10%;
+	/*border:solid 1px black;*/
+}

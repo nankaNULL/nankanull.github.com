@@ -1,0 +1,50 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    min-width: 1330px;
+}
+.ui-head{
+    width: 100%;
+    background-color: #333276;
+    height: 55px;
+}
+#ui-line{
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+#ui-head-logo{
+    width: 210px;
+    height: 30px;
+    margin-left: 15%;
+    margin-top: 12.5px;
+}
+.fa-twitter{
+    color: #fff;
+    margin-left: 45%;
+    font-size: 30px;
+}
+.fa-facebook-square{
+    color: #fff;
+    margin-left: 1%;
+}
+.ui-content{
+    width: 100%;
+    border: none;
+    margin-bottom: -4px;
+}
+#ui-content-back{
+    width: 100%;
+}
+#ui-content-tit{
+    position: absolute;
+    right: 100px;
+    top: 100px;
+}
+#ui-content-head{
+    position: absolute;
+    left: 200px;
+    top: 100px;
+}

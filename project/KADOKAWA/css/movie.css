@@ -1,0 +1,133 @@
+*{margin:0 ;padding:0}
+body{
+min-width: 1280px;
+}
+.ui-movie-head{
+	margin-top: 10px;
+	height: 35px;
+	width: 100%;
+	background-color: rgb(251,251,252);
+}
+.ui-movie-head li{
+    display:inline-block;
+    float:left;
+}
+.ui-movie-head a:link {
+	color: black;
+	font-size: 14px;
+	text-decoration: none
+}
+.ui-movie-head a:visited {
+	color: black;
+	font-size: 14px;
+	text-decoration: none
+}
+.ui-movie-head a:hover {
+	color: black;
+	font-size: 14px;
+	text-decoration:underline;
+}
+.ui-movie-head a:active {
+	color:black;
+	font-size: 14px;
+	text-decoration: underline;
+}
+.ui-movie-head-font{
+	font-size: 13px;
+	font-weight: bold;
+	margin-left: 1%;
+	margin-top: 9px;
+}
+.chefont{
+	font-weight: normal;
+	font-size: 10px;
+	color: rgb(185,185,185);
+	margin-left: 1%;
+	margin-top: 10px;
+}
+.ui-movie-head-top{
+	margin-left: 2.8%;
+	margin-top: 5px;
+}
+.ui-movie-firsttitle{
+	color:rgb(50,50,118);
+	font-size: 20px;
+	margin-left: 2.4%;
+	margin-top: 40px;
+}
+.ui-movie-firsttitle-item{
+	color:rgb(50,50,118);
+	font-size: 16px;
+	margin-left: 2.4%;
+	margin-top: 30px;
+}
+.ui-movie-grayoutline{
+	display: flex;
+	justify-content: center;
+	width: 100%;
+	height: 3px;
+}
+.ui-movie-grayline{
+	width: 95.4%;
+	background-color: rgb(214,215,227);
+	height: 3px;
+	margin-top: 13px;
+	display: flex;
+}
+.ui-movie-blueline{
+	border-top: 3px solid rgb(50,50,118);
+	width: 6%;
+}
+.ui-movie-itemoutline{
+	display: flex;
+	margin-left: 0.5%;
+}
+.ui-movie-item{
+	height: 230px;
+	width: 22%;
+	border: 1px solid rgb(204,204,204);
+	border-radius: 5px;
+	margin-left: 1.8%;
+	margin-top: 38px;
+	display: flex;
+	justify-content: center;
+}
+.ui-movie-item-top{
+	margin-top: 10px;
+}
+.ui-movie-item-line{
+	background-color:rgb(204,204,204);
+	width: 100%;
+	height: 1px;
+}
+.ui-movie-item a:hover{
+	opacity:0.4;
+	filter:alpha(opacity=40);
+	transition: all 0.2s linear 0s;
+}
+.ui-movie-item-buttom{
+	color: rgba(0,0,0,0.75);
+	width:260px;
+	height: 100px;
+	border: none;
+	font-size: 15px;
+	display: flex;
+	align-items: center;
+}
+a{
+	text-decoration: none;
+}
+.ui-movie-secondtitle-item{
+	color:rgb(50,50,118);
+	font-size: 16px;
+	margin-left: 2.4%;
+	margin-top: 64px;
+}
+.ui-movie-blueline2{
+	border-top: 3px solid rgb(50,50,118);
+	width: 3%;
+}
+.ui-movie-buttom-block{
+	width: 100%;
+	height: 78px;
+}

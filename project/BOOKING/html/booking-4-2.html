@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <title>Bootstrap Wizard Demo</title>
+    <link href="../lib/bootstrap/css/bootstrap.css" rel="stylesheet">
+    <link href="../css/booking.css" rel="stylesheet">
+    <link href="../css/head.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">     
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="sr-only">导航条</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <span class="navbar-brand massage">
+                    <span class="Mobile-text">Mobile</span>
+                    <span class="massage-text">massages</span>
+                </span>
+            </div>
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-right" id="nav-list">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="booking-1.html">Booking</a></li>
+                    <li><a href="therapist.html">Therapist</a></li>
+                    <li><a href="chose.html">Styles</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="massage.html">FAQ</a></li>
+                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a target="_blank" class="sign" href="login.html">Sign In</a></li>
+                </ul>               
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div id="plain" class="example">
+            <div class="wizard">
+                <ul class="nav nav-wizard ul">
+                    <li class="ui-title li" id="ui-notit">
+                        <a href="#step1" >1</a>
+                    </li>
+                    <li class="ui-title li">
+                        <a href="#step2">2</a>
+                    </li>
+                    <li class="ui-title li">
+                        <a href="">3</a>
+                    </li>
+                    <li class="ui-title li">
+                        <a href="#step4" class="ui-toptit">4</a>
+                    </li>
+                </ul>
+                <div class="wizard-pane" id="step5">
+                    <div class='wizard-containter-step4'>
+                        <p class="step1-title">Check out</p>
+                        <div class='step1-massage'>
+                            <div class='step1-massage-date'>
+                                <p class="step1-subtitle">Name on card</p>
+                                <input type="text" class='text-style'>
+                            </div>
+                            <div class='step1-massage-time'>
+                                <p class="step1-subtitle">Credit card number</p>
+                                <input type="text" class='text-style' placeholder="Apt/Floor/Suite">
+                            </div>
+                            <div class='step1-massage-time'>
+                                <p class="step1-subtitle">Expiration date</p>
+                                <input type="text" class='step4-style' placeholder="MM/YY">
+                            </div>
+                            <div class='step1-massage-code'>
+                                <p class="step1-subtitle">Security code</p>
+                                <input type="text" class='step4-rightstyle' >
+                            </div>
+                            <div class='step1-massage-date'>
+                                <p class="step1-subtitle">Billing zip/Postal code</p>
+                                <input type="text" class='text-style'>
+                            </div>
+                            <div class='step1-massage-time'>
+                                <p class="step1-subtitle">Gift/Promo code</p>
+                                <input type="text" class='step4-style' placeholder="">
+                            </div>
+                            <div class='step5-massage-button'>APPLY
+                            </div>
+                            <div class='step1-massage-date'>
+                                <p class="step1-subtitle">Order summary</p>
+                                <div class="step5-massage-checka">05/29/2017 5:00PM</div>
+                                <div class="step5-massage-check">Single Session</div>
+                                <div class="step5-massage-check">Swidish/60 min/Either Therapist</div>
+                                <div class="step5-massage-check">Xytftd Street,20066</div>
+                                <div class="step5-massage-checkb">Total<div class="checkb-word">£99</div></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a href="booking_success.html"><div class="bottom-btn">Book My Massage</div></a>
+                <div class="bottom-button"><i class='fa-2x fa fa-angle-left'></i>
+                 <a href="booking-4.html"> <div class="bottom-back">Back</div></a>
+             </div>
+         </div> <!-- wizard -->
+     </div><!-- example -->
+ </div> <!-- /container -->
+ <object type="text/x-scriptlet" data="footer.html" class="bottom" width=100% height=200></object>
+</body>
+<script src="../lib/jquery.js"></script>
+<script src="../lib/bootstrap/js/bootstrap.js"></script>
+</html>

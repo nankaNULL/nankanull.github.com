@@ -1,0 +1,259 @@
+@charset "UTF-8";
+
+.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+.example {
+    padding-top: 100px;
+    margin-bottom: 20px;
+}
+
+.wizard .wizard-body {
+    /*background-color: #fcfcfc;*/
+}
+.ul{
+	border-top:solid 2px #d8fae9;
+	border-bottom:solid 2px #d8fae9;
+	height:69px;
+}
+.li{
+	float:left;
+	color:#cccccc;
+	font-size:20px;
+	width:20%;
+	text-align: center;
+	line-height: 45px;
+}
+.ui-title{
+    color: #cccccc;
+}
+.ui-toptit{
+    font-size: 1.5em;
+    color: #666666;
+}
+a{
+    color: #cccccc;
+}
+#ui-notit{
+    margin-left: 10%;
+}
+.step5-massage-button{
+    margin-top: -30px;
+    margin-left: 50%;
+    width: 30%;
+    height: 30px;
+    background-color: #64d2a3;
+    color: #fff;
+    text-align: center;
+    line-height: 30px;
+    font-size: 0.1em;
+    font-weight: bold;
+}
+/*.modal {
+    position: relative;
+    display: block;
+    z-index: 1;
+}
+.modal .wizard nav {
+    border-bottom-left-radius: 4px;
+}
+.modal .wizard .wizard-body {
+    border-bottom-right-radius: 4px;
+}
+*/
+
+@media (min-width:768px) {
+    #plain {
+        margin: auto;
+        width: 426px;
+    }
+    .modal .modal-dialog {
+        width: 602px;
+    }
+    .panel {
+        width: 602px;
+        margin: auto;
+    }
+}
+.step1-title{
+    text-align: center;
+    font-size: 2.5em;
+    color: #999999;
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+.step1-massage{
+    margin-left: 16%;
+    /*margin-right: 14%;*/
+}
+.step1-subtitle{
+    font-size: 0.8em;
+    margin-top: 10px;
+    font-weight: bold;
+    /*font-family: Verdana;*/
+    color: #a0a0a0;
+    margin-bottom: 2px;
+}
+.text-style{
+    height: 30px;
+    width: 80%;
+    border: 1px solid #e9e9e9;
+}
+.text-time{
+    height: 30px;
+    width: 80%;
+    border: 1px solid #e9e9e9;
+}
+.text-park{
+    height: 210px;
+    width: 80%;
+    border: 1px solid #e9e9e9;
+}
+.wizard-body{
+    height: auto !important;
+}
+#timetable{
+    display: none;
+    margin-left: -5%;
+}
+.step4-style{
+    height: 30px;
+    border: 1px solid #e9e9e9;
+    width: 38%;
+}
+.step4-rightstyle{
+    height: 30px;
+    border: 1px solid #e9e9e9;
+    width: 70%;
+}
+.step1-massage-code{
+    margin-top: -60px;
+    margin-left: 50%;
+}
+.step5-massage-check{
+    height: 30px;
+    width: 80%;
+    color: #999999;
+    line-height: 30px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 0.5em;
+    border-bottom: 1px solid #d8fae9;
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+}
+.step5-massage-checka{
+    height: 30px;
+    width: 80%;
+    color: #999999;
+    line-height: 30px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 0.5em;
+    border-bottom: 1px solid #d8fae9;
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+.step5-massage-checkb{
+    height: 60px;
+    width: 80%;
+    color: #64d2a3;
+    line-height: 60px;
+    text-indent: 10px;
+    font-weight: bold;
+    font-size: 1.3em;
+    border-bottom: 1px solid #e1e1e1;
+    border-right: 1px solid #e1e1e1;
+    border-left: 1px solid #e1e1e1;
+    border-top: 2px solid #d8fae9;
+}
+.checkb-word{
+    color: #64d2a3;
+    text-align: right;
+    font-size: 1.2em;
+    margin-top: -60px;
+    margin-right: 4%;
+}
+.bottom-btn{
+    width: 45%;
+    margin-left: 25%;
+    margin-top: 40px;
+    height: 45px;
+    background-color: #64d2a3;
+    color: #fff;
+    text-align: center;
+    line-height: 45px;
+    font-size: 1.3em;
+}
+.bottom-back{
+    height: 30px;
+    margin-left: 35%;
+    margin-top: -35px;
+    font-size: 1.4em;
+    line-height: 30px;
+    color: #9a9a9a;
+    font-weight: bold;
+}
+.bottom-button{
+    width: 30%;
+    height: 30px;
+    margin-left: 33%;
+    margin-top: 40px;
+    font-size: 1.0em;
+    line-height: 30px;
+}
+.fa-angle-left{
+    margin-left: 17%;
+    color: #9a9a9a;
+}
+.bottom{
+    margin-top: 100px;
+}
+a:hover{
+    text-decoration: none;
+}
+input::placeholder{
+    color: #cccccc;
+    text-indent: 10px;
+}
+@media screen and (min-width: 235px) and (max-width: 540px) {
+    .step1-title{
+        font-size: 1.5em;
+        margin-top: 20px;
+    }
+    .step1-massage{
+        margin-left: 10%;
+    }
+    .text-style{
+        width: 85%;
+    }
+    .text-time{
+        width: 85%;
+    }
+    .text-park{
+        width: 85%;
+    }
+    .step5-massage-button{
+        width: 35%;
+    }
+    .bottom-back{
+        margin-left:30%;
+    }
+}
+@media screen and (min-width : 768px) and (max-width: 1023px) {
+   .step4-style{
+        width: 30%;
+    }
+    .step4-rightstyle{
+        width: 60%;
+    }
+}
+@media screen and (min-width: 235px) and (max-width: 540px) {
+    .bottom-btn{
+        font-size: 1.25em;
+        width: 100%
+    }
+}

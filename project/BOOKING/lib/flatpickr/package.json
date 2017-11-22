@@ -1,0 +1,113 @@
+{
+  "_args": [
+    [
+      {
+        "raw": "E:\\短学期\\lib\\flatpikcr",
+        "scope": null,
+        "escapedName": null,
+        "name": null,
+        "rawSpec": "E:\\短学期\\lib\\flatpikcr",
+        "spec": "E:\\短学期\\lib\\flatpikcr",
+        "type": "directory"
+      },
+      "C:\\Users\\lenovo"
+    ]
+  ],
+  "_from": "E:\\短学期\\lib\\flatpikcr",
+  "_id": "flatpickr@3.0.6",
+  "_inCache": true,
+  "_location": "/flatpickr",
+  "_phantomChildren": {},
+  "_requested": {
+    "raw": "E:\\短学期\\lib\\flatpikcr",
+    "scope": null,
+    "escapedName": null,
+    "name": null,
+    "rawSpec": "E:\\短学期\\lib\\flatpikcr",
+    "spec": "E:\\短学期\\lib\\flatpikcr",
+    "type": "directory"
+  },
+  "_requiredBy": [
+    "#USER"
+  ],
+  "_resolved": "file:E:\\短学期\\lib\\flatpikcr",
+  "_shasum": "574fbf42341074cae14674c17a595ebe02059512",
+  "_shrinkwrap": null,
+  "_spec": "E:\\短学期\\lib\\flatpikcr",
+  "_where": "C:\\Users\\lenovo",
+  "author": {
+    "name": "Gregory",
+    "email": "gregory.mkv@gmail.com"
+  },
+  "browserslist": [
+    "ie >= 9",
+    "last 2 versions",
+    "safari >= 7"
+  ],
+  "bugs": {
+    "url": "https://github.com/chmln/flatpickr/issues"
+  },
+  "collective": {
+    "type": "opencollective",
+    "url": "https://opencollective.com/flatpickr",
+    "logo": "https://opencollective.com/opencollective/logo.txt"
+  },
+  "dependencies": {},
+  "description": "A lightweight, powerful javascript datetime picker",
+  "devDependencies": {
+    "autoprefixer-stylus": "latest",
+    "babel-cli": "latest",
+    "babel-eslint": "^7.2.3",
+    "babel-plugin-transform-object-assign": "latest",
+    "babel-plugin-transform-remove-strict-mode": "latest",
+    "babel-preset-es2015": "latest",
+    "babel-preset-flow": "latest",
+    "chokidar": "latest",
+    "coveralls": "latest",
+    "eslint": "latest",
+    "eslint-plugin-flowtype": "^2.34.0",
+    "eslint-plugin-jest": "^20.0.3",
+    "glob": "latest",
+    "http-server": "latest",
+    "jest": "latest",
+    "livereload": "latest",
+    "ncp": "latest",
+    "nodemon": "latest",
+    "npm-run-all": "latest",
+    "opn": "latest",
+    "rtlcss": "latest",
+    "semver": "latest",
+    "stylus": "latest",
+    "uglify-js": "latest"
+  },
+  "homepage": "https://chmln.github.io/flatpickr",
+  "keywords": [
+    "javascript",
+    "datetimepicker",
+    "calendar",
+    "date",
+    "time",
+    "picker",
+    "lightweight"
+  ],
+  "license": "MIT",
+  "main": "dist/flatpickr.js",
+  "name": "flatpickr",
+  "optionalDependencies": {},
+  "readme": "## flatpickr - javascript datetime picker\n[![Build Status](https://travis-ci.org/chmln/flatpickr.svg?branch=master)](https://travis-ci.org/chmln/flatpickr)\n\n[![Coverage](https://coveralls.io/repos/github/chmln/flatpickr/badge.svg?branch=master)](https://coveralls.io/github/chmln/flatpickr)\n[![npm version](https://badge.fury.io/js/flatpickr.svg)](https://www.npmjs.com/package/flatpickr)\n![Bower version](https://badge.fury.io/bo/flatpickr-calendar.svg)\n[![CDNJS](https://img.shields.io/cdnjs/v/flatpickr.svg)](https://cdnjs.com/libraries/flatpickr)\n[![License](https://img.shields.io/badge/license-MIT-blue.svg?style=plastic)](https://raw.githubusercontent.com/chmln/flatpickr/master/LICENSE.md)\n\n\n![blue](https://cloud.githubusercontent.com/assets/11352152/14549371/3cbb65da-028d-11e6-976d-a6f63f32061f.PNG)\n![green](https://cloud.githubusercontent.com/assets/11352152/14549373/3cbe975a-028d-11e6-9192-43975f0146da.PNG)\n![confetti](https://cloud.githubusercontent.com/assets/11352152/14549440/de9bf55e-028d-11e6-9271-46782a99efea.PNG)\n![red](https://cloud.githubusercontent.com/assets/11352152/14549374/3cc01102-028d-11e6-9ff4-0cf208a310c4.PNG)\n![default](https://cloud.githubusercontent.com/assets/11352152/14549370/3cadb750-028d-11e6-818d-c6a1bc6349fc.PNG)\n![dark](https://cloud.githubusercontent.com/assets/11352152/14549372/3cbc8514-028d-11e6-8daf-ec1ba01c9d7e.PNG)\n\n\n## Preamble\nAlmost every large SPA or project involves date and time input. There are limited options, however, if you also prefer to keep your projects lean and consequently stay away from heavy frameworks such as [jQuery](https://jsperf.com/jquery-vs-javascript-performance-comparison/22), or even Bootstrap.\n\nAppalled at the fact that I have to load 300kb of jquery and jquery UI or hook up bootstrap just to use a calendar, I created this \\[date\\]\\[time\\]picker that's powerful, easy to use, and looks good out of the box.\n\nWritten in vanilla javascript, works with anything, anywhere.\n\n![wew](https://cloud.githubusercontent.com/assets/11352152/14397836/d02d2f7c-fdad-11e5-9658-bedfb997ff52.png)\n\n## Compatibility\nIE9+, iOS Safari 6+, MS Edge, Chrome 8+, Firefox 6+\n\n## Install & Use\n\nDemos and documentation: https://chmln.github.io/flatpickr\n\nSee also:\n* [React Component](https://github.com/coderhaoxin/react-flatpickr)\n* [ember-flatpickr addon](https://www.npmjs.com/package/ember-flatpickr)\n* [angular-flatpickr addon](https://www.npmjs.com/package/angular-flatpickr)\n* [Vue-Blu/datepicker](https://chenz24.github.io/vue-blu/#/en/components/datepicker)\n\n## Supporting flatpickr\n\nSpecial thanks to support by:\n\n- BrowserStack for providing indispensable testing utilities\n\n  <a target=\"_blank\" href=\"https://www.browserstack.com/\">\n    <img src=\"https://cloud.githubusercontent.com/assets/11352152/24872293/ec310d48-1dea-11e7-9d09-8120d5742fba.png\">\n  </a>\n\n---\n\n<a href=\"https://opencollective.com/flatpickr/backer/0/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/0/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/1/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/1/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/2/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/2/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/3/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/3/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/4/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/4/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/5/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/5/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/6/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/6/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/7/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/7/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/8/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/8/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/9/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/9/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/10/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/10/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/11/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/11/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/12/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/12/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/13/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/13/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/14/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/14/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/15/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/15/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/16/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/16/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/17/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/17/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/18/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/18/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/19/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/19/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/20/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/20/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/21/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/21/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/22/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/22/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/23/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/23/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/24/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/24/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/25/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/25/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/26/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/26/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/27/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/27/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/28/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/28/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/backer/29/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/backer/29/avatar.svg\"></a>\n\n<a href=\"https://opencollective.com/flatpickr/sponsor/0/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/0/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/1/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/1/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/2/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/2/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/3/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/3/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/4/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/4/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/5/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/5/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/6/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/6/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/7/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/7/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/8/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/8/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/9/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/9/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/10/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/10/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/11/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/11/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/12/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/12/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/13/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/13/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/14/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/14/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/15/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/15/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/16/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/16/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/17/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/17/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/18/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/18/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/19/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/19/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/20/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/20/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/21/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/21/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/22/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/22/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/23/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/23/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/24/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/24/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/25/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/25/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/26/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/26/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/27/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/27/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/28/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/28/avatar.svg\"></a>\n<a href=\"https://opencollective.com/flatpickr/sponsor/29/website\" target=\"_blank\"><img src=\"https://opencollective.com/flatpickr/sponsor/29/avatar.svg\"></a>\n\n",
+  "readmeFilename": "README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chmln/flatpickr.git"
+  },
+  "scripts": {
+    "build": "node build.js",
+    "coveralls": "jest --coverage && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js",
+    "lint": "eslint src/",
+    "release": "jest --bail --silent && ./release",
+    "start": "nodemon --watch build.js build.js -- --dev",
+    "test": "npm run lint && jest --bail"
+  },
+  "style": "dist/flatpickr.css",
+  "version": "3.0.6"
+}
