@@ -12,90 +12,95 @@
 	<body>
 		<div class="ui-navigation">
 			<div class="ui-navigation-content">
-				<div class="ui-navigation-btn btn-special" >
+				<a href="../index.html"><div class="ui-navigation-btn btn-special" >
 					<i class="fa fa-2x fa-angle-left icon" id="icon-left"></i>
 					<div>Back</div>
 				</div>
-				<div class="ui-navigation-btn">Overview</div>
-				<div class="ui-navigation-btn">Status</div>
-				<div class="ui-navigation-btn">Standings</div>
-			</div>
-			<div class="ui-navigation-content">
-				<div class="ui-navigation-btn btn-special">
-					<div>Login</div>
-					<i class="fa fa-angle-down icon" id="icon-down"></i>
-				</div>
+			</a>
+			<div class="ui-navigation-btn">Overview</div>
+			<div class="ui-navigation-btn">Status</div>
+			<div class="ui-navigation-btn">Standings</div>
+		</div>
+		<div class="ui-navigation-content">
+			<div class="ui-navigation-btn btn-special">
+				<div>Login</div>
+				<i class="fa fa-angle-down icon" id="icon-down"></i>
 			</div>
 		</div>
-		<div class="ui-content">
-			<div class="ui-content-title">
-				<div class="title-list-item">
-					<h2>【C++系列2.2】if-else系列</h2>
-					<div class="title-item-count" id="count-title">1025</div>
-				</div>
-				<div class="title-list-item">
-					<span>Time Limit: </span>
-					<div class="title-item-count count-color-orange">1s</div>
-				</div>
-				<div class="title-list-item">
-					<span>Memory Limit: </span>
-					<div class="title-item-count count-color-orange">128MB</div>
-				</div>
-				<div class="title-list-item">
-					<span>Submission: </span>
-					<div class="title-item-count count-color-skyblue">678</div>
-				</div>
-				<div class="title-list-item">
-					<span>AC: </span>
-					<div class="title-item-count">295</div>
-				</div>
-				<div class="title-list-item">
-					<span>Score: </span>
-					<div class="title-item-count">1</div>
-				</div>
-				<div class="ui-content-submit">
-					<div class="btn-submit">Submit</div>
-					<div class="btn-submit" id="btn-submit-codes">Codes</div>
-				</div>
+	</div>
+	<div class="ui-content">
+		<div class="ui-content-title">
+			<div class="title-list-item">
+				<h2>【期末考 B】吉祥物学数学</h2>
+				<div class="title-item-count" id="count-title">1025</div>
 			</div>
-			<div class="ui-content-item">
-				<h3>Description</h3>
-				<p>yh他很懒，大于1000的数他就不想去记。如果一个数大于1000就被认为是BAD数，并输出BAD，否则，输出GOOD</p>
+			<div class="title-list-item">
+				<span>Time Limit: </span>
+				<div class="title-item-count count-color-orange">1s</div>
 			</div>
-			<div class="ui-content-item">
-				<h3>Input</h3>
-				<p>输入一个整数n,n<=10000</p>
+			<div class="title-list-item">
+				<span>Memory Limit: </span>
+				<div class="title-item-count count-color-orange">128MB</div>
 			</div>
-			<div class="ui-content-item">
-				<h3>Output</h3>
-				<p>BAD or GOOD</p>
+			<div class="title-list-item">
+				<span>Submission: </span>
+				<div class="title-item-count count-color-skyblue">0</div>
 			</div>
-			<div class="ui-content-item">
-				<h3>Samples</h3>
-				<div class="item-samples">
-					<div>input:</div>
-					<div class="smaples-answer">5000</div>
-					<div class="smaples-answer">2</div>
-					<div>output:</div>
-					<div class="smaples-answer">BAD</div>
-					<div class="smaples-answer">GOOD</div>
-				</div>
+			<div class="title-list-item">
+				<span>AC: </span>
+				<div class="title-item-count">0</div>
 			</div>
-			<div class="ui-content-item">
-				<h3>Author</h3>
-				<p>emmm</p>
+			<div class="title-list-item">
+				<span>Score: </span>
+				<div class="title-item-count">1</div>
 			</div>
 			<div class="ui-content-submit">
 				<div class="btn-submit">Submit</div>
 				<div class="btn-submit" id="btn-submit-codes">Codes</div>
 			</div>
 		</div>
-		<div class="ui-bottom">
-			<div class="ui-bottom-box">
-				<div class="bottom-item">OJ is based on HZNUOJ</div>
-				<div class="bottom-item">--- Maintainer List ---</div>
-				<div class="bottom-item">★Server Time: 2017-11-22 15:49:25★</div>
+		<div class="ui-content-item">
+			<h3>Description</h3>
+			<p>Loy要考验吉祥物cjc的智商，她让吉祥物判断一个数和2,3的关系。</p>
+		</div>
+		<div class="ui-content-item">
+			<h3>Input</h3>
+			<p>输入一个自然数n。</p>
+		</div>
+		<div class="ui-content-item">
+			<h3>Output</h3>
+			<p>如果n能被3和2整除，则输出”n divisible by 2 and 3? YES”，否则输出”n divisible by 2 and 3? NO”；
+				<br><br>
+				如果n能被3整除或者能被2整除，则输出”n divisible by 2 or 3? YES”，否则输出”n divisible by 2 or 3? NO”；
+				<br><br>
+			如果n能被2,3其中一个整除则输出”n divisible by 2 or 3, but not both? YES”，否则输出”n divisible by 2 or 3, but not both? NO”。</p>
+		</div>
+		<div class="ui-content-item">
+			<h3>Samples</h3>
+			<div class="item-samples">
+				<div>input:</div>
+				<div class="smaples-answer">18</div>
+				<div>output:</div>
+				<div class="smaples-answer">18 divisible by 2 and 3? YES
+					<br>18 divisible by 2 or 3? YES
+				<br>18 divisible by 2 or 3, but not both? NO</div>
 			</div>
 		</div>
-	</body>
+		<div class="ui-content-item">
+			<h3>Author</h3>
+			<p>emmm</p>
+		</div>
+		<div class="ui-content-submit">
+			<div class="btn-submit">Submit</div>
+			<div class="btn-submit" id="btn-submit-codes">Codes</div>
+		</div>
+	</div>
+	<div class="ui-bottom">
+		<div class="ui-bottom-box">
+			<div class="bottom-item">OJ is based on HZNUOJ</div>
+			<div class="bottom-item">--- Maintainer List ---</div>
+			<div class="bottom-item">★Server Time: 2017-11-22 15:49:25★</div>
+		</div>
+	</div>
+</body>
 </html>

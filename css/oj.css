@@ -47,7 +47,13 @@ body{
 
 /*-----center_content------*/
 /*--box--*/
-
+a{
+	text-decoration:none;
+	color:white;
+}
+a:hover{
+	text-decoration:none;
+}
 .ui-content{
 	margin:40px 25px 35px 25px;
 	display: flex;
@@ -125,9 +131,10 @@ body{
 	border:solid 1px #cccccc;
 }
 .item-samples div{
-	padding:3px 0 0 3px;
+	/*padding:3px 0 0 3px;*/
 	border-bottom: solid 1px #cccccc;
-	height:25px;
+	padding:3px 0 5px 5px ;
+	/*height:25px;*/
 	font-size:15px;
 }
 .smaples-answer{
