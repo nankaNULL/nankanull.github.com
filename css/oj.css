@@ -153,3 +153,14 @@ a:hover{
 	text-align: center;
 	font-size:14px;
 }
+
+/*---- answer.html ----*/
+#content-answer{
+	border:solid 1px #cccccc;
+	padding:10px 20px 10px 20px;
+	justify-content: left;
+}
+#content-answer p{
+	line-height: 30px;
+	font-size: 13px;
+}
