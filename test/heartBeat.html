@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HEARTBEAT</title>
+  <style>
+    @keyframes beat {
+      0% {
+        transform: scale(.4);
+      }
+      10% {
+        transform: scale(.3);
+      }
+      20% {
+        transform: scale(.5);
+      }
+      30% {
+        transform: scale(.4);
+      }
+      40% {
+        transform: scale(.6);
+      }
+      50% {
+        transform: scale(.5);
+      }
+      60% {
+        transform: scale(.7);
+      }
+      70% {
+        transform: scale(.6);
+      }
+      80% {
+        transform: scale(.8);
+      }
+      90% {
+        transform: scale(.7);
+      }
+      100% {
+        transform: scale(.8);
+      }
+    }
+    @keyframes lineshow {
+      0%, 93% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 1;
+      }
+    }
+    .center{
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    .heart-box{
+      border: 1px solid #e5e5e5;
+      height: 150px;
+      width: 150px;
+      margin: -75px 0 0 -75px;
+      border-radius: 50%;
+      background-color: #fff;
+      animation: beat 2.5s infinite;
+    }
+    .heart{
+      position: absolute;
+      top: 23px;
+      height: 120px;
+      width: 80px;
+      border-radius: 50%;
+      background: red;
+      /* border: 1px solid black; */
+    }
+    #left{
+      left: 20px;
+      transform: rotate(-30deg)
+    }
+    #right{
+      right: 20px;
+      transform: rotate(30deg)
+    }
+    .back-line{
+      margin: -75px 0 0 -75px;
+      width: 150px;
+      animation: lineshow 2.5s infinite;
+    }
+    .line{
+      /* border: 1px solid red; */
+      background: red;
+      height: 150px;
+      width: 10px;
+      margin: 0 0 0 -5px;
+      border-radius: 10px;
+    }
+    #line-2{ transform: rotate(45deg) }
+    #line-3{ transform: rotate(90deg) }
+    #line-4{ transform: rotate(-45deg) }
+  </style>
+</head>
+<body>
+  <div class="heart-box center">
+    <div class="heart" id="left"></div>
+    <div class="heart" id="right"></div>
+  </div>
+  <div class="back-line center">
+    <div class="line center" id="line-1"></div>
+    <div class="line center" id="line-2"></div>
+    <div class="line center" id="line-3"></div>
+    <div class="line center" id="line-4"></div>
+  </div>
+</body>
+</html>
