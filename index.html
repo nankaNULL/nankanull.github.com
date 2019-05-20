@@ -6,15 +6,31 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>TEST | YUWAN</title>
     <style>
+      html, body{ height: 100% }
+      ul, li{ 
+        margin: 0;
+        padding: 0;
+      }
       li{
         list-style: none;
+      }
+      .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+      }
+      .link-item{
+        padding: 10px;
+        margin-top:20px;
       }
     </style>
   </head>
   <body>
-    <ul>
-      <li><a href="./test/heart.html">给狗贼的小心心 - 马赛克版</a></li>
-      <li><a href="./test/heartBeat.html">给狗贼的小心心 - 动画版</a></li>
+    <ul class="container">
+      <li class="link-item"><a href="./test/heart.html">给狗贼的小心心 - 马赛克版</a></li>
+      <li class="link-item"><a href="./test/heartBeat.html">给狗贼的小心心 - 动画版</a></li>
       <!-- <a href="oj.html">OJ试题</a> -->
     </ul>
   </body>
