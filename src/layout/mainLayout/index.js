@@ -14,7 +14,7 @@ export default class MainLayout extends React.PureComponent{
       url: '/home'
     },{
       title: '列表',
-      url: '/list'
+      url: '/fun'
     },{
       title: '排行',
       url: '/common'
