@@ -6,6 +6,7 @@ const buildPath = path.resolve(__dirname, '../dist');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 module.exports = {
   mode:'production',
   context:path.resolve(__dirname, '../src'), // 解析起点
@@ -52,7 +53,8 @@ module.exports = {
         use: [
           'style-loader', //上面的简写方式
           'css-loader',
-          'sass-loader'
+          'sass-loader',
+          '@alifd/next-theme-loader?{"theme":"@alifd/theme-4"}'
         ]
       },
       {
@@ -105,10 +107,10 @@ module.exports = {
       template: 'index.html',
       hash: false,
       chunksSortMode:'none',
-      title:'webpack-react',
+      title:'DEV | YUWAN',
       assets: {
         favicon: '/images/favicon.ico', 
-        config_js: '/config/conf.prod.js'
+        config_js: '/config/conf.dev.js'
       }
     }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
@@ -117,13 +119,12 @@ module.exports = {
       chunkFilename: 'css/[name].[hash].css'
     }),
     new CopyWebpackPlugin([ 
+      {from: path.resolve(__dirname,'../public/constants'),to:'constants'},
       {from: path.resolve(__dirname,'../public/images'),to:'images'},
       {from: path.resolve(__dirname,'../public/config'),to:'config'},
-      // {from: path.resolve(__dirname,'../public/mock'),to:'mock'},
-      // {from: path.resolve(__dirname,'../public/images'),to:'images'},
       {from: path.resolve(__dirname,'../public/fonts'),to:'fonts'},
-      // {from: path.resolve(__dirname,'../public/pages'),to:'pages'}
     ]),
+    new ThemePlugin({ theme: '@alifd/theme-4' }),
     new webpack.DefinePlugin({
       __PRODUCTION: JSON.stringify(true)
     }),

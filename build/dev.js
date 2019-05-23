@@ -37,12 +37,6 @@ module.exports = {
         test: /\.js|jsx$/,
         exclude: /node_modules/, // exclude不包括，include只命中
         use:['babel-loader?cacheDirectory'],
-         // use: { // 这算是第二种写法，和上面的意义是一样的
-        //   loader: 'babel-loader',
-        //   options: {
-        //     cacheDirectory:true
-        //   }
-        // }
       },
       {
         test: /\.(less|css)$/,
