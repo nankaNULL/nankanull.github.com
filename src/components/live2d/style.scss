@@ -1,0 +1,15 @@
+.page-component-live2d{
+  position: relative;
+  .modal-tab{
+    position: absolute;
+    left: 50px;
+    bottom: 200px;
+    .tab-item{ 
+      padding: 10px 20px;
+      border: 1px solid #e5e5e5;
+      &.active{
+        border: 1px solid #aaa;
+      }
+    }
+  }
+}
