@@ -16,7 +16,7 @@ module.exports = {
   },
   output: {
     path: buildPath, // 输出文件存放在本地的目录
-    publicPath: './', // 配置发布到线上资源的 URL 前缀
+    publicPath: './dist/', // 配置发布到线上资源的 URL 前缀
     chunkFilename: 'js/[name].[hash].js', // 无入口的chunk在输出时的文件名称
     filename: 'js/[name].[hash].js'
   },

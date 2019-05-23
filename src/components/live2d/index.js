@@ -5,6 +5,24 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import './style.scss';
 
+let Person = function () {};
+Person.prototype.name = "emm",
+Person.prototype.age = 21,
+Person.prototype.job = "software Engineer",
+Person.prototype.sayName = function () {
+  console.log(this.name)
+}
+
+let person1 = new Person();
+let keys = Object.keys(Person.prototype);
+console.log(keys)
+console.log(Object.keys(person1))
+person1.name = "newname";
+console.log(Object.keys(person1))
+console.log(Object.getOwnPropertyNames(person1.__proto__))
+console.log(Object.getOwnPropertyNames(Person.prototype))
+
+
 export default class live2d extends React.PureComponent{
   state = {
     loadlive2d: null,
