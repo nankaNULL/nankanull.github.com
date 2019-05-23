@@ -30,16 +30,16 @@ export default class live2d extends React.PureComponent{
   
   render () {
     const { currModel } = this.state;
+    const boxStyle = {
+      width: `${currModel.width}px`, 
+      height: `${currModel.height}px`,
+    }
     return (
-      <div 
-        // ref="modelWrap" 
-        // className="model-wrap" 
-        style={{ width: `${currModel.width}px`, height: `${currModel.height}px` }}>
+      <div style={boxStyle}>
         <canvas 
           id="live2d" 
           width={currModel.width} 
           height={currModel.height}>
-          
         </canvas>
       </div>
     )

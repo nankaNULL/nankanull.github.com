@@ -2,20 +2,6 @@ import React from 'react';
 import { Card, Button } from '@alifd/next';
 import _ from "lodash";
 import GridLayout from '@/components/gridLayout';
-import Live2d from '@/components/live2d';
-
-function Person(name, age, job) {
-  this.name = name;
-  this.age = age;
-  this.job = job;
-  this.sayName = sayName;
-}
-function sayName () {
-  console.log(this.name)
-}
-let person1 = new Person("Greg", 27, "software");
-console.log(person1)
-person1.sayName()
 
 export default class Home extends React.PureComponent{
   state = {
@@ -131,9 +117,6 @@ export default class Home extends React.PureComponent{
               {this.generateDOM()}
             </GridLayout>
           </div>
-        </Card>
-        <Card title="看板娘">
-          <Live2d></Live2d>
         </Card>
       </div>
     )
