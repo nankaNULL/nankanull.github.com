@@ -5,23 +5,19 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import './style.scss';
 
-let Person = function () {};
-Person.prototype.name = "emm",
-Person.prototype.age = 21,
-Person.prototype.job = "software Engineer",
-Person.prototype.sayName = function () {
-  console.log(this.name)
+function SuperType(name,age) {
+  this.property = true;
 }
-
-let person1 = new Person();
-let keys = Object.keys(Person.prototype);
-console.log(keys)
-console.log(Object.keys(person1))
-person1.name = "newname";
-console.log(Object.keys(person1))
-console.log(Object.getOwnPropertyNames(person1.__proto__))
-console.log(Object.getOwnPropertyNames(Person.prototype))
-
+SuperType.prototype.getSuperValue = function () {
+  return this.property;
+}
+function SubType() {
+  this.subproperty = false;
+}
+SubType.prototype = new SuperType();
+console.log(SuperType);
+console.log(SuperType.prototype);
+console.log(SubType.prototype);
 
 export default class live2d extends React.PureComponent{
   state = {
