@@ -9,14 +9,14 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 module.exports = {
   mode:'production',
-  context:path.resolve(__dirname, '../src'), // 解析起点
+  // context:path.resolve(__dirname, '../src'), // 解析起点
   entry:{
     vendor: ['react', 'react-dom', 'react-router', 'moment'],
-    app: ['babel-polyfill','./main.js']
+    app: ['babel-polyfill','./src/main.js']
   },
   output: {
     path: buildPath, // 输出文件存放在本地的目录
-    publicPath: './dist/', // 配置发布到线上资源的 URL 前缀
+    publicPath: './', // 配置发布到线上资源的 URL 前缀
     chunkFilename: 'js/[name].[hash].js', // 无入口的chunk在输出时的文件名称
     filename: 'js/[name].[hash].js'
   },
@@ -59,8 +59,25 @@ module.exports = {
       },
       {
         test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?[tv]=[\d.]+)*$/,
-        use: ['file-loader?name=[name].[ext]']
-      }
+        // include
+        use: [
+          // 'file-loader?name=[name].[ext]',
+          {
+            loader: 'file-loader',
+            options: {
+              name: '[name].[ext]',
+              outputPath: 'imgs/'
+            }
+          },
+          {
+            loader: 'image-webpack-loader',
+            options: {
+                // bypassOnDebug: true,
+                disable: true
+            }
+          }
+        ]
+      },
     ]
   },
   performance: { 
@@ -104,7 +121,7 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: 'index.html',
-      template: 'index.html',
+      template: './src/index.html',
       hash: false,
       chunksSortMode:'none',
       title:'DEV | YUWAN',
