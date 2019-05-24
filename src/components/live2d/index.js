@@ -39,12 +39,12 @@ export default class live2d extends React.PureComponent{
   // 初始化 live2d
   initLoadLive2d = () => {
     const { currModel } = this.state;
-    loadFiles('./constants/live2d/js/live2d.js')
-    .then(() => {
+    // loadFiles('./constants/live2d/js/live2d.js')
+    // .then(() => {
       this.setState({loadlive2d: window.loadlive2d}, () => {
         loadlive2d("live2d", `./constants/live2d/${currModel.name}/model.json`)
       })
-    })
+    // })
   }
 
   modalChange = ( modalId ) => {
