@@ -1,0 +1,89 @@
+html {
+  margin: 0;
+  padding: 0;
+  background-color: black;
+}
+
+body,
+html {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#svgContainer {
+  width: 80%;
+  height: 80%;
+  background-color: #000;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+}
+
+.page-audio-play{
+  .play-action, .progress, .music-list{ margin: 20px }
+
+  .play-action{
+    i{
+      font-size: 18px;
+      cursor: pointer;
+      color: #aaa;
+      &:hover{
+        color: lightcoral;
+      }
+    }
+    
+    .prev{
+      display: inline-block;
+      transform: rotate(180deg);
+    }
+  }
+  .progress{
+    display: flex;
+    align-items: center;
+    .progress-bar{
+      position: relative;
+      width: 50%;
+      .bar-total, .bar-buffer, .bar-current{
+        position: absolute;
+        width: 0;
+        height: 4px;
+      }
+      .bar-total{
+        width: 100%;
+        background: #e8e8e8;
+      }
+      .bar-buffer{
+        background: #ababab;
+      }
+      .bar-current{
+        background: lightcoral;
+      }
+      .bar-box{
+        position: absolute;
+        top: -3px;
+        height: 10px;
+        width: 10px;
+        background: lightsalmon;
+        border-radius: 5px;
+      }
+    }
+    .progress-time{
+      margin-left: 10px;
+    }
+  }
+  .music-list{
+    border: 1px solid #aaa;
+    width: 50%;
+    .list-item{
+      margin: 10px;
+      cursor: pointer;
+      &:hover{
+        color: lightcoral;
+      }
+    }
+  }
+}
