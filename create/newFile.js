@@ -11,11 +11,12 @@ let newName = '', newPath = '', template = '';
 // 重命名
 componentRename = (answer) => {
   newName = answer;
+  className = answer.charAt(0).toUpperCase() + newName.slice(1);
   newPath = path.resolve('./src/components/', newName);
   template = `import React from 'react';
 import PropTypes from 'prop-types';
 
-export default class ${newName} extends React.PureComponent{
+export default class ${className} extends React.PureComponent{
   static defaultProps = {
 
   };
@@ -36,10 +37,11 @@ export default class ${newName} extends React.PureComponent{
 // 重命名
 pageRename = (answer) => {
   newName = answer;
+  className = answer.charAt(0).toUpperCase() + newName.slice(1);
   newPath = path.resolve('./src/pages/', newName);
   template = `import React from 'react';
 
-export default class ${newName} extends React.PureComponent{
+export default class ${className} extends React.PureComponent{
   render () {
     return (
       <div className="page-${newName}">

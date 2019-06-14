@@ -5,20 +5,6 @@ import _ from 'lodash';
 import classNames from 'classnames';
 import './style.scss';
 
-function SuperType(name,age) {
-  this.property = true;
-}
-SuperType.prototype.getSuperValue = function () {
-  return this.property;
-}
-function SubType() {
-  this.subproperty = false;
-}
-SubType.prototype = new SuperType();
-console.log(SuperType);
-console.log(SuperType.prototype);
-console.log(SubType.prototype);
-
 export default class live2d extends React.PureComponent{
   state = {
     loadlive2d: null,
