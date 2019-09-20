@@ -1,5 +1,6 @@
 import 'whatwg-fetch';
 import { getResponse } from './interceptor'
+import { message } from 'antd';
 
 class Http{
   get(url, params) {
@@ -21,7 +22,9 @@ class Http{
     .then(response => {
       // 他这里没有直接在上面返回response.json()是因为还想做一个loading false的操作
       // 我这里没做，其实放上面，可能，也不是不可以啊
-      return response.json()
+      // return response.text();
+      // 后端返回回来的数据必须是json格式，，不然就会出错，自己写后台的时候要注意做一层变换
+      return response.json() // response.json()会帮助你运行一次JSON.parse(response.text())
     })
     .then(data => {
       // 这里才算真的把data值返回了回去
@@ -38,7 +41,8 @@ class Http{
       } else if (err=== 403 || err === 402) {
         window.location.href = '/home'; 
       } else if (err === 404) {
-        window.location.href = '/list';
+        message.error("404");
+        // window.location.href = '/list';
       } else {
         message.error(`请求错误`);
       }
