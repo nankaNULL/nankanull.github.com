@@ -12,10 +12,12 @@ export default class MainLayout extends React.PureComponent{
     topNavData: [{
       title: '首页',
       url: '/home'
-    },{
-      title: '列表',
-      url: '/fun'
-    },{
+    },
+    // {
+    //   title: '列表',
+    //   url: '/fun'
+    // },
+    {
       title: '组件',
       url: '/audioPlay'
     }],

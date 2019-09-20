@@ -16,8 +16,8 @@ module.exports = {
   output: {
     path: buildPath, // 输出文件存放在本地的目录
     publicPath: '/', // 配置发布到线上资源的 URL 前缀
-    chunkFilename: 'js/[name].[hash].js', // 无入口的chunk在输出时的文件名称
-    filename: 'js/[name].[hash].js'
+    chunkFilename: 'js/[name].bundle.js', // 无入口的chunk在输出时的文件名称
+    filename: 'js/[name].bundle.js'
   },
   resolve: { // 配置 Webpack 如何寻找模块所对应的文件
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'], // 用于配置在尝试过程中用到的后缀列表
@@ -98,6 +98,10 @@ module.exports = {
     proxy: [{
       path: '/users',
       target: 'https://api.github.com',//测试
+      changeOrigin: true
+    }, {
+      path: '/test/**',
+      target: 'http://localhost:3000',
       changeOrigin: true
     }]
   }
