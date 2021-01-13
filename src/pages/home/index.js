@@ -4,9 +4,10 @@ import _ from "lodash";
 import GridLayout from '@/components/gridLayout';
 import { API } from '@/api';
 import io from 'socket.io-client';
+import classNames from 'classnames';
 import './style.scss';
 
-const socket = io.connect(`192.168.1.129:3000`);
+const socket = io.connect(`192.168.106.193:3000`);
 
 export default class Home extends React.PureComponent {
   state = {
@@ -14,7 +15,8 @@ export default class Home extends React.PureComponent {
     layout: [],
     isCollect: false,
     chatList: [],
-    chatConnect: ''
+    chatConnect: '',
+    username: ''
   };
 
   componentDidMount() {
@@ -118,15 +120,20 @@ export default class Home extends React.PureComponent {
 
   // 聊天消息发送
   sendMessage = () => {
-    const { chatConnect } = this.state;
+    const { chatConnect, username } = this.state;
     if (chatConnect) {
       socket.emit('message', chatConnect)
-      this.setState({ chatConnect: '' })
+      let params = {};
+      if (!username) {
+        params.username = chatConnect;
+      }
+      params.chatConnect = '';
+      this.setState(params)
     }
   }
 
   render() {
-    const { isCollect, layout, chatList, chatConnect } = this.state;
+    const { isCollect, layout, chatList, chatConnect, username } = this.state;
 
     return (
       <div className="page-home grid-drag-handle" style={{ padding: 20, background: '#fff' }}>
@@ -163,7 +170,7 @@ export default class Home extends React.PureComponent {
           <div className="chat-room">
             <ul className="room-list">
               {
-                chatList.map(item => <li className="list-item" key={item.createAt}>
+                chatList.map(item => <li className={classNames('list-item', {'position-r': username === item.user})} key={item.createAt}>
                   <p>
                     <span className="mr-10">{item.user}</span>
                     <span className="text-gray">{item.createAt}</span>
