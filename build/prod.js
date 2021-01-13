@@ -8,11 +8,11 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 module.exports = {
-  mode:'production',
+  mode: 'production',
   // context:path.resolve(__dirname, '../src'), // 解析起点
-  entry:{
+  entry: {
     vendor: ['react', 'react-dom', 'react-router', 'moment'],
-    app: ['babel-polyfill','./src/main.js']
+    app: ['babel-polyfill', './src/main.js']
   },
   output: {
     path: buildPath, // 输出文件存放在本地的目录
@@ -23,65 +23,71 @@ module.exports = {
   resolve: { // 配置 Webpack 如何寻找模块所对应的文件
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'], // 用于配置在尝试过程中用到的后缀列表
     alias: { // 别名
-      '@':path.resolve(__dirname,'../src'),
+      '@': path.resolve(__dirname, '../src'),
       'public': path.resolve(__dirname, '../public'),
       'components': path.resolve(__dirname, '../src/components/'),
       'pages': path.resolve(__dirname, '../src/pages/'),
       'layout': path.resolve(__dirname, '../src/layout/')
     }
   },
-  externals :{
+  externals: {
     'FRONT_CONF': 'FRONT_CONF'
   },
-  module: { 
+  module: {
     rules: [{ // 配置模块的读取和解析规则，通常用来配置 Loader
-        test: /\.js|jsx$/,
-        exclude: /node_modules/, // exclude不包括，include只命中
-        use:['babel-loader?cacheDirectory'],
-      },
-      {
-        test: /\.(less|css)$/,
-        use: [
-          'style-loader',
-          'css-loader',
-          'less-loader'
-          // 'less-loader?{modifyVars:'+JSON.stringify(theme)+'}'
-        ],
-      },
-      {
-        test: /\.(scss|sass)$/,
-        use: [
-          'style-loader', //上面的简写方式
-          'css-loader',
-          'sass-loader',
-          '@alifd/next-theme-loader?{"theme":"@alifd/theme-4"}'
-        ]
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?[tv]=[\d.]+)*$/,
-        // include
-        use: [
-          // 'file-loader?name=[name].[ext]',
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'dist/images/'
-            }
-          },
-          {
-            loader: 'image-webpack-loader',
-            options: {
-                // bypassOnDebug: true,
-                disable: true
+      test: /\.js|jsx$/,
+      exclude: /node_modules/, // exclude不包括，include只命中
+      use: ['babel-loader?cacheDirectory'],
+    },
+    {
+      test: /\.(less|css)$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'less-loader',
+          options: {
+            lessOptions: {
+              javascriptEnabled: true
             }
           }
-        ]
-      },
+        }
+      ],
+    },
+    {
+      test: /\.(scss|sass)$/,
+      use: [
+        'style-loader', //上面的简写方式
+        'css-loader',
+        'sass-loader',
+        '@alifd/next-theme-loader?{"theme":"@alifd/theme-4"}'
+      ]
+    },
+    {
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?[tv]=[\d.]+)*$/,
+      // include
+      use: [
+        // 'file-loader?name=[name].[ext]',
+        {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: 'dist/images/'
+          }
+        },
+        {
+          loader: 'image-webpack-loader',
+          options: {
+            // bypassOnDebug: true,
+            disable: true
+          }
+        }
+      ]
+    },
     ]
   },
-  performance: { 
-    hints: false, 
+  performance: {
+    hints: false,
   },
   optimization: {
     runtimeChunk: {
@@ -123,10 +129,10 @@ module.exports = {
       filename: 'index.html',
       template: './src/index.html',
       hash: false,
-      chunksSortMode:'none',
-      title:'DEV | YUWAN',
+      chunksSortMode: 'none',
+      title: 'DEV | YUWAN',
       assets: {
-        favicon: './dist/images/favicon.ico', 
+        favicon: './dist/images/favicon.ico',
         config_js: './dist/config/conf.dev.js'
       }
     }),
@@ -135,12 +141,14 @@ module.exports = {
       filename: 'css/[name].[hash].css',
       chunkFilename: 'css/[name].[hash].css'
     }),
-    new CopyWebpackPlugin([ 
-      {from: path.resolve(__dirname,'../public/constants'),to:'constants'},
-      {from: path.resolve(__dirname,'../public/images'),to:'images'},
-      {from: path.resolve(__dirname,'../public/config'),to:'config'},
-      {from: path.resolve(__dirname,'../public/fonts'),to:'fonts'},
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: path.resolve(__dirname, '../public/constants'), to: 'constants' },
+        { from: path.resolve(__dirname, '../public/images'), to: 'images' },
+        { from: path.resolve(__dirname, '../public/config'), to: 'config' },
+        { from: path.resolve(__dirname, '../public/fonts'), to: 'fonts' },
+      ]
+    }),
     new ThemePlugin({ theme: '@alifd/theme-4' }),
     new webpack.DefinePlugin({
       __PRODUCTION: JSON.stringify(true)

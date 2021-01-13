@@ -6,12 +6,12 @@ const buildPath = path.resolve(__dirname, '../dist');
 const ThemePlugin = require('@alifd/next-theme-webpack-plugin');
 // const  theme = require('../antd-theme.js');
 module.exports = {
-  mode:'development',
+  mode: 'development',
   devtool: 'cheap-module-eval-source-map',
-  context:path.resolve(__dirname, '../src'), // 解析起点
-  entry:{
+  context: path.resolve(__dirname, '../src'), // 解析起点
+  entry: {
     vendor: ['react', 'react-dom', 'react-router', 'moment'],
-    app: ['babel-polyfill','./main.js']
+    app: ['babel-polyfill', './main.js']
   },
   output: {
     path: buildPath, // 输出文件存放在本地的目录
@@ -22,44 +22,51 @@ module.exports = {
   resolve: { // 配置 Webpack 如何寻找模块所对应的文件
     extensions: ['.js', '.jsx', '.scss', '.css', '.json'], // 用于配置在尝试过程中用到的后缀列表
     alias: { // 别名
-      '@':path.resolve(__dirname,'../src'),
+      '@': path.resolve(__dirname, '../src'),
       'public': path.resolve(__dirname, '../public'),
       'components': path.resolve(__dirname, '../src/components/'),
       'pages': path.resolve(__dirname, '../src/pages/'),
       'layout': path.resolve(__dirname, '../src/layout/')
     }
   },
-  externals :{
+  externals: {
     'FRONT_CONF': 'FRONT_CONF'
   },
-  module: { 
+  module: {
     rules: [{ // 配置模块的读取和解析规则，通常用来配置 Loader
-        test: /\.js|jsx$/,
-        exclude: /node_modules/, // exclude不包括，include只命中
-        use:['babel-loader?cacheDirectory'],
-      },
-      {
-        test: /\.(less|css)$/,
-        use: [
-            'style-loader',
-            'css-loader',
-            'less-loader'
-            // 'less-loader?{modifyVars:'+JSON.stringify(theme)+'}'
-          ],
-      },
-      {
-        test: /\.(scss|sass)$/,
-        use: [
-          'style-loader', //上面的简写方式
-          'css-loader',
-          'sass-loader',
-          '@alifd/next-theme-loader?{"theme":"@alifd/theme-4"}'
-        ]
-      },
-      {
-        test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?[tv]=[\d.]+)*$/,
-        use: ['file-loader?name=[name].[ext]']
-      }
+      test: /\.js|jsx$/,
+      exclude: /node_modules/, // exclude不包括，include只命中
+      use: ['babel-loader?cacheDirectory'],
+    },
+    {
+      test: /\.(less|css)$/,
+      use: [
+        'style-loader',
+        'css-loader',
+        {
+          loader: 'less-loader',
+          options: {
+            lessOptions: {
+              javascriptEnabled: true
+            }
+          }
+        }
+        // 'less-loader?{modifyVars:'+JSON.stringify(theme)+'}'
+      ],
+    },
+    {
+      test: /\.(scss|sass)$/,
+      use: [
+        'style-loader', //上面的简写方式
+        'css-loader',
+        'sass-loader',
+        '@alifd/next-theme-loader?{"theme":"@alifd/theme-4"}'
+      ]
+    },
+    {
+      test: /\.(png|jpg|jpeg|gif|svg|woff|woff2|ttf|eot)(\?[tv]=[\d.]+)*$/,
+      use: ['file-loader?name=[name].[ext]']
+    }
     ]
   },
   plugins: [
@@ -67,22 +74,24 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       hash: false,
-      chunksSortMode:'none',
-      title:'DEV | YUWAN',
+      chunksSortMode: 'none',
+      title: 'DEV | YUWAN',
       assets: {
-        favicon: '/images/favicon.ico', 
+        favicon: '/images/favicon.ico',
         config_js: '/config/conf.dev.js'
       }
     }),
     new webpack.NamedModulesPlugin(),
     new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({__PRODUCTION: JSON.stringify(false)}),
-    new CopyWebpackPlugin([ 
-      {from: path.resolve(__dirname,'../public/constants'),to:'constants'},
-      {from: path.resolve(__dirname,'../public/images'),to:'images'},
-      {from: path.resolve(__dirname,'../public/config'),to:'config'},
-      {from: path.resolve(__dirname,'../public/fonts'),to:'fonts'},
-    ]),
+    new webpack.DefinePlugin({ __PRODUCTION: JSON.stringify(false) }),
+    new CopyWebpackPlugin({
+      patterns: [
+        // {from: path.resolve(__dirname,'../public/constants'),to:'constants'},
+        { from: path.resolve(__dirname, '../public/images'), to: 'images' },
+        { from: path.resolve(__dirname, '../public/config'), to: 'config' },
+        { from: path.resolve(__dirname, '../public/fonts'), to: 'fonts' },
+      ]
+    }),
     new ThemePlugin({ theme: '@alifd/theme-4' }),
   ],
   devServer: {
@@ -94,7 +103,7 @@ module.exports = {
     disableHostCheck: true,
     compress: true,
     hot: true, // 开启模块热替换功能
-    inline:true, // 自动刷新网页实现实时预览
+    inline: true, // 自动刷新网页实现实时预览
     proxy: [{
       path: '/users',
       target: 'https://api.github.com',//测试
